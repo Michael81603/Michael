@@ -1,0 +1,37 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="780" viewBox="0 0 1200 780" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="120" y1="40" x2="1080" y2="740" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0A1020"/>
+      <stop offset="1" stop-color="#020611"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="350" y1="180" x2="860" y2="620" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFB326"/>
+      <stop offset="1" stop-color="#FF5A1F"/>
+    </linearGradient>
+    <linearGradient id="inputGlow" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#1A2338"/>
+      <stop offset="1" stop-color="#0B1222"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="780" rx="32" fill="url(#bg)"/>
+  <circle cx="998" cy="118" r="180" fill="#FF7A1F" fill-opacity="0.12"/>
+  <circle cx="192" cy="672" r="180" fill="#0E5FFF" fill-opacity="0.08"/>
+  <rect x="285" y="78" width="630" height="624" rx="34" fill="#07101F" stroke="#23314D"/>
+  <g>
+    <rect x="339" y="160" width="110" height="110" rx="28" fill="#111B30"/>
+    <path d="M362 219C362 192.49 383.49 171 410 171H514.5C591.54 171 654 233.46 654 310.5C654 387.54 591.54 450 514.5 450H366L386 363H514.5C543.49 363 567 339.49 567 310.5C567 281.51 543.49 258 514.5 258H399L410 219H362Z" fill="url(#accent)"/>
+    <circle cx="425" cy="468" r="28" fill="#FF7B22"/>
+    <circle cx="558" cy="468" r="28" fill="#FF8E24"/>
+  </g>
+  <text x="600" y="182" text-anchor="middle" fill="#F7F5F1" font-size="44" font-family="Segoe UI, Arial, sans-serif" font-weight="700">Connexion Admin</text>
+  <text x="600" y="220" text-anchor="middle" fill="#8F9AB0" font-size="22" font-family="Segoe UI, Arial, sans-serif">Acces securise au back-office DeliverPro</text>
+  <rect x="380" y="286" width="440" height="72" rx="18" fill="url(#inputGlow)" stroke="#23314D"/>
+  <rect x="380" y="382" width="440" height="72" rx="18" fill="url(#inputGlow)" stroke="#23314D"/>
+  <text x="410" y="330" fill="#6F7B91" font-size="20" font-family="Segoe UI, Arial, sans-serif">Email administrateur</text>
+  <text x="410" y="426" fill="#6F7B91" font-size="20" font-family="Segoe UI, Arial, sans-serif">Mot de passe</text>
+  <rect x="380" y="490" width="440" height="74" rx="20" fill="url(#accent)"/>
+  <circle cx="430" cy="527" r="14" stroke="#F9E1D5" stroke-width="4" fill="none" stroke-dasharray="50 32"/>
+  <text x="605" y="536" text-anchor="middle" fill="#FFF7F1" font-size="24" font-family="Segoe UI, Arial, sans-serif" font-weight="700">Connexion en cours...</text>
+  <rect x="380" y="586" width="440" height="58" rx="16" fill="#221721" stroke="#6C2633"/>
+  <text x="410" y="622" fill="#FF9CA7" font-size="20" font-family="Segoe UI, Arial, sans-serif">Email ou mot de passe incorrect.</text>
+</svg>

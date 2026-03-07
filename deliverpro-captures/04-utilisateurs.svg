@@ -1,0 +1,54 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="780" viewBox="0 0 1280 780" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1280" y2="780" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0A1020"/>
+      <stop offset="1" stop-color="#04070E"/>
+    </linearGradient>
+    <linearGradient id="orange" x1="260" y1="120" x2="920" y2="620" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFB62E"/>
+      <stop offset="1" stop-color="#FF5A1F"/>
+    </linearGradient>
+  </defs>
+  <rect width="1280" height="780" fill="url(#bg)"/>
+  <rect width="242" height="780" fill="#090E18"/>
+  <text x="28" y="76" fill="url(#orange)" font-size="34" font-family="Segoe UI, Arial, sans-serif" font-weight="700">DeliverPro</text>
+  <rect x="12" y="282" width="208" height="46" rx="14" fill="#3B2217"/>
+  <text x="40" y="311" fill="#FF8424" font-size="18" font-family="Segoe UI, Arial, sans-serif">Utilisateurs</text>
+  <text x="280" y="82" fill="#F4F4F5" font-size="34" font-family="Segoe UI, Arial, sans-serif" font-weight="700">Gestion des Utilisateurs</text>
+  <rect x="280" y="118" width="972" height="1" fill="#182237"/>
+  <rect x="1086" y="164" width="158" height="44" rx="14" fill="url(#orange)"/>
+  <text x="1165" y="192" text-anchor="middle" fill="#FFF7F1" font-size="18" font-family="Segoe UI, Arial, sans-serif" font-weight="700">Nouvel utilisateur</text>
+  <rect x="304" y="236" width="940" height="458" rx="26" fill="#07101F" stroke="#1B3150"/>
+  <text x="328" y="282" fill="#F4F4F5" font-size="26" font-family="Segoe UI, Arial, sans-serif" font-weight="700">Gestion des Utilisateurs</text>
+  <rect x="304" y="314" width="940" height="54" fill="#121A2C"/>
+  <g fill="#52607A" font-size="16" font-family="Segoe UI, Arial, sans-serif" font-weight="700">
+    <text x="322" y="346">#</text>
+    <text x="390" y="346">NOM</text>
+    <text x="550" y="346">EMAIL</text>
+    <text x="830" y="346">ROLE</text>
+    <text x="950" y="346">TELEPHONE</text>
+    <text x="1110" y="346">STATUT</text>
+  </g>
+  <rect x="304" y="368" width="940" height="74" fill="#08101E"/>
+  <rect x="304" y="442" width="940" height="74" fill="#091221"/>
+  <g font-size="18" font-family="Segoe UI, Arial, sans-serif">
+    <text x="322" y="414" fill="#D9E1EE">#1</text>
+    <text x="390" y="414" fill="#E7EDF6">Admin Principal</text>
+    <text x="550" y="414" fill="#E7EDF6">admin@deliverpro.com</text>
+    <rect x="830" y="388" width="70" height="30" rx="15" fill="#0C341F"/>
+    <text x="865" y="409" text-anchor="middle" fill="#20C96E">Admin</text>
+    <text x="950" y="414" fill="#8290A7">-</text>
+    <rect x="1090" y="388" width="64" height="30" rx="15" fill="#0C341F"/>
+    <text x="1122" y="409" text-anchor="middle" fill="#20C96E">Actif</text>
+    <text x="322" y="488" fill="#D9E1EE">#10</text>
+    <text x="390" y="488" fill="#E7EDF6">Justin</text>
+    <text x="550" y="488" fill="#E7EDF6">justin@deliverpro.com</text>
+    <rect x="830" y="462" width="74" height="30" rx="15" fill="#12345C"/>
+    <text x="867" y="483" text-anchor="middle" fill="#56A9FF">Livreur</text>
+    <text x="950" y="488" fill="#E7EDF6">0343555506</text>
+    <rect x="1090" y="462" width="64" height="30" rx="15" fill="#0C341F"/>
+    <text x="1122" y="483" text-anchor="middle" fill="#20C96E">Actif</text>
+  </g>
+  <rect x="1060" y="452" width="112" height="40" rx="14" fill="#182236" stroke="#2A3854"/>
+  <text x="1116" y="478" text-anchor="middle" fill="#F4F4F5" font-size="18" font-family="Segoe UI, Arial, sans-serif">Desactiver</text>
+</svg>

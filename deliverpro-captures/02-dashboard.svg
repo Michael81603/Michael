@@ -1,0 +1,52 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="780" viewBox="0 0 1280 780" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1280" y2="780" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0A1020"/>
+      <stop offset="1" stop-color="#04070E"/>
+    </linearGradient>
+    <linearGradient id="orange" x1="260" y1="120" x2="920" y2="620" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFB62E"/>
+      <stop offset="1" stop-color="#FF5A1F"/>
+    </linearGradient>
+  </defs>
+  <rect width="1280" height="780" fill="url(#bg)"/>
+  <rect width="242" height="780" fill="#090E18"/>
+  <text x="28" y="76" fill="url(#orange)" font-size="34" font-family="Segoe UI, Arial, sans-serif" font-weight="700">DeliverPro</text>
+  <text x="28" y="102" fill="#42506B" font-size="18" font-family="Segoe UI, Arial, sans-serif">ADMIN</text>
+  <rect x="0" y="138" width="242" height="1" fill="#1E2940"/>
+  <rect x="12" y="182" width="208" height="46" rx="14" fill="#3B2217"/>
+  <text x="36" y="211" fill="#FF8424" font-size="18" font-family="Segoe UI, Arial, sans-serif">Dashboard Global</text>
+  <text x="18" y="298" fill="#45516A" font-size="15" font-family="Segoe UI, Arial, sans-serif" font-weight="700">GESTION</text>
+  <text x="18" y="340" fill="#C7D1E0" font-size="18" font-family="Segoe UI, Arial, sans-serif">Utilisateurs</text>
+  <text x="18" y="384" fill="#C7D1E0" font-size="18" font-family="Segoe UI, Arial, sans-serif">Entreprises</text>
+  <text x="18" y="428" fill="#C7D1E0" font-size="18" font-family="Segoe UI, Arial, sans-serif">Finances</text>
+  <text x="282" y="82" fill="#F4F4F5" font-size="34" font-family="Segoe UI, Arial, sans-serif" font-weight="700">Dashboard Global</text>
+  <rect x="282" y="118" width="970" height="1" fill="#182237"/>
+  <g>
+    <rect x="306" y="172" width="294" height="170" rx="22" fill="#07101F" stroke="#1B3150"/>
+    <rect x="626" y="172" width="294" height="170" rx="22" fill="#07101F" stroke="#814322"/>
+    <rect x="946" y="172" width="294" height="170" rx="22" fill="#07101F" stroke="#1B3150"/>
+    <rect x="306" y="194" width="46" height="46" rx="14" fill="#0A2C1D"/>
+    <rect x="626" y="194" width="46" height="46" rx="14" fill="#3A1A1C"/>
+    <rect x="946" y="194" width="46" height="46" rx="14" fill="#0A2C1D"/>
+    <text x="306" y="274" fill="#7D8AA0" font-size="18" font-family="Segoe UI, Arial, sans-serif">Revenus Totaux</text>
+    <text x="626" y="274" fill="#7D8AA0" font-size="18" font-family="Segoe UI, Arial, sans-serif">Depenses Totales</text>
+    <text x="946" y="274" fill="#7D8AA0" font-size="18" font-family="Segoe UI, Arial, sans-serif">Benefice Net</text>
+    <text x="306" y="320" fill="#21D06F" font-size="34" font-family="Segoe UI, Arial, sans-serif" font-weight="700">568 000 MGA</text>
+    <text x="626" y="320" fill="#FF554B" font-size="34" font-family="Segoe UI, Arial, sans-serif" font-weight="700">185 000 MGA</text>
+    <text x="946" y="320" fill="#21D06F" font-size="34" font-family="Segoe UI, Arial, sans-serif" font-weight="700">383 000 MGA</text>
+  </g>
+  <rect x="306" y="374" width="404" height="234" rx="24" fill="#07101F" stroke="#1B3150"/>
+  <rect x="734" y="374" width="250" height="234" rx="24" fill="#07101F" stroke="#1B3150"/>
+  <rect x="1008" y="374" width="232" height="234" rx="24" fill="#07101F" stroke="#1B3150"/>
+  <text x="328" y="418" fill="#F4F4F5" font-size="18" font-family="Segoe UI, Arial, sans-serif" font-weight="700">Evolution Revenus</text>
+  <text x="756" y="418" fill="#F4F4F5" font-size="18" font-family="Segoe UI, Arial, sans-serif" font-weight="700">Evolution Depenses</text>
+  <text x="1030" y="418" fill="#F4F4F5" font-size="18" font-family="Segoe UI, Arial, sans-serif" font-weight="700">Repartition</text>
+  <path d="M334 548 C380 500, 430 534, 474 474 S578 522, 664 448" stroke="#22D06F" stroke-width="8" stroke-linecap="round" fill="none"/>
+  <path d="M756 546 C796 512, 832 528, 866 506 S920 518, 962 456" stroke="#FF5A4E" stroke-width="8" stroke-linecap="round" fill="none"/>
+  <circle cx="1124" cy="498" r="74" stroke="#22D06F" stroke-width="28" fill="none" stroke-dasharray="280 150" transform="rotate(-90 1124 498)"/>
+  <circle cx="1124" cy="498" r="74" stroke="#FF4C4C" stroke-width="28" fill="none" stroke-dasharray="90 340" transform="rotate(-90 1124 498)"/>
+  <text x="1124" y="506" text-anchor="middle" fill="#F3F5F7" font-size="28" font-family="Segoe UI, Arial, sans-serif" font-weight="700">75%</text>
+  <rect x="306" y="636" width="934" height="102" rx="22" fill="#07101F" stroke="#1B3150"/>
+  <text x="330" y="676" fill="#F4F4F5" font-size="18" font-family="Segoe UI, Arial, sans-serif" font-weight="700">Histogramme Commandes par Entreprise</text>
+</svg>

@@ -1,0 +1,65 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="780" viewBox="0 0 1280 780" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1280" y2="780" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0A1020"/>
+      <stop offset="1" stop-color="#04070E"/>
+    </linearGradient>
+    <linearGradient id="orange" x1="260" y1="120" x2="920" y2="620" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFB62E"/>
+      <stop offset="1" stop-color="#FF5A1F"/>
+    </linearGradient>
+  </defs>
+  <rect width="1280" height="780" fill="url(#bg)"/>
+  <rect width="242" height="780" fill="#090E18"/>
+  <text x="28" y="76" fill="url(#orange)" font-size="34" font-family="Segoe UI, Arial, sans-serif" font-weight="700">DeliverPro</text>
+  <rect x="12" y="400" width="208" height="46" rx="14" fill="#3B2217"/>
+  <text x="40" y="429" fill="#FF8424" font-size="18" font-family="Segoe UI, Arial, sans-serif">Finances</text>
+  <text x="280" y="82" fill="#F4F4F5" font-size="34" font-family="Segoe UI, Arial, sans-serif" font-weight="700">Gestion Financiere</text>
+  <rect x="280" y="118" width="972" height="1" fill="#182237"/>
+  <g>
+    <rect x="304" y="160" width="286" height="148" rx="22" fill="#07101F" stroke="#814322"/>
+    <rect x="614" y="160" width="286" height="148" rx="22" fill="#07101F" stroke="#1B3150"/>
+    <rect x="924" y="160" width="320" height="148" rx="22" fill="#07101F" stroke="#1B3150"/>
+    <text x="328" y="230" fill="#7D8AA0" font-size="18" font-family="Segoe UI, Arial, sans-serif">Revenus</text>
+    <text x="328" y="274" fill="#21D06F" font-size="34" font-family="Segoe UI, Arial, sans-serif" font-weight="700">568 000 MGA</text>
+    <text x="638" y="230" fill="#7D8AA0" font-size="18" font-family="Segoe UI, Arial, sans-serif">Depenses</text>
+    <text x="638" y="274" fill="#FF554B" font-size="34" font-family="Segoe UI, Arial, sans-serif" font-weight="700">185 000 MGA</text>
+    <text x="948" y="230" fill="#7D8AA0" font-size="18" font-family="Segoe UI, Arial, sans-serif">Benefice Net</text>
+    <text x="948" y="274" fill="#21D06F" font-size="34" font-family="Segoe UI, Arial, sans-serif" font-weight="700">383 000 MGA</text>
+  </g>
+  <rect x="304" y="334" width="940" height="380" rx="26" fill="#07101F" stroke="#1B3150"/>
+  <text x="330" y="380" fill="#F4F4F5" font-size="26" font-family="Segoe UI, Arial, sans-serif" font-weight="700">Journal des Transactions</text>
+  <rect x="304" y="410" width="940" height="54" fill="#121A2C"/>
+  <g fill="#52607A" font-size="16" font-family="Segoe UI, Arial, sans-serif" font-weight="700">
+    <text x="322" y="442">#</text>
+    <text x="404" y="442">TYPE</text>
+    <text x="536" y="442">LIBELLE</text>
+    <text x="808" y="442">ENTREPRISE</text>
+    <text x="1042" y="442">MONTANT</text>
+  </g>
+  <g>
+    <rect x="304" y="464" width="940" height="62" fill="#08101E"/>
+    <rect x="304" y="526" width="940" height="62" fill="#091221"/>
+    <rect x="304" y="588" width="940" height="62" fill="#08101E"/>
+  </g>
+  <g font-size="18" font-family="Segoe UI, Arial, sans-serif">
+    <text x="322" y="504" fill="#D9E1EE">#33</text>
+    <rect x="396" y="478" width="78" height="28" rx="14" fill="#0C341F"/>
+    <text x="435" y="498" text-anchor="middle" fill="#20C96E">Revenu</text>
+    <text x="536" y="504" fill="#E7EDF6">Vente du 5-6 Mars</text>
+    <text x="808" y="504" fill="#E7EDF6">Kenature</text>
+    <text x="1042" y="504" fill="#22D06F">+200 000 MGA</text>
+    <text x="322" y="566" fill="#D9E1EE">#32</text>
+    <rect x="396" y="540" width="92" height="28" rx="14" fill="#3C2D09"/>
+    <text x="442" y="560" text-anchor="middle" fill="#F6C12F">Depense</text>
+    <text x="536" y="566" fill="#E7EDF6">Mama Colette</text>
+    <text x="808" y="566" fill="#E7EDF6">General</text>
+    <text x="1042" y="566" fill="#FF554B">-50 000 MGA</text>
+    <text x="322" y="628" fill="#D9E1EE">#31</text>
+    <rect x="396" y="602" width="92" height="28" rx="14" fill="#3C2D09"/>
+    <text x="442" y="622" text-anchor="middle" fill="#F6C12F">Depense</text>
+    <text x="536" y="628" fill="#E7EDF6">Wifi</text>
+    <text x="808" y="628" fill="#E7EDF6">General</text>
+    <text x="1042" y="628" fill="#FF554B">-49 000 MGA</text>
+  </g>
+</svg>

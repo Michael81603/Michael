@@ -1,0 +1,59 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="780" viewBox="0 0 1280 780" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1280" y2="780" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0A1020"/>
+      <stop offset="1" stop-color="#04070E"/>
+    </linearGradient>
+    <linearGradient id="orange" x1="260" y1="120" x2="920" y2="620" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFB62E"/>
+      <stop offset="1" stop-color="#FF5A1F"/>
+    </linearGradient>
+  </defs>
+  <rect width="1280" height="780" fill="url(#bg)"/>
+  <rect width="242" height="780" fill="#090E18"/>
+  <text x="28" y="76" fill="url(#orange)" font-size="34" font-family="Segoe UI, Arial, sans-serif" font-weight="700">DeliverPro</text>
+  <rect x="12" y="220" width="208" height="46" rx="14" fill="#3B2217"/>
+  <text x="40" y="249" fill="#FF8424" font-size="18" font-family="Segoe UI, Arial, sans-serif">Commandes</text>
+  <text x="280" y="82" fill="#F4F4F5" font-size="34" font-family="Segoe UI, Arial, sans-serif" font-weight="700">Gestion des Commandes</text>
+  <rect x="280" y="118" width="972" height="1" fill="#182237"/>
+  <rect x="304" y="164" width="292" height="44" rx="14" fill="#07101F" stroke="#1C304B"/>
+  <text x="326" y="192" fill="#6F7B91" font-size="18" font-family="Segoe UI, Arial, sans-serif">Rechercher commande...</text>
+  <g>
+    <rect x="610" y="164" width="56" height="44" rx="14" fill="#07101F" stroke="#814322"/>
+    <rect x="676" y="164" width="92" height="44" rx="14" fill="#07101F" stroke="#814322"/>
+    <rect x="778" y="164" width="80" height="44" rx="14" fill="#141D31" stroke="#24324A"/>
+    <rect x="868" y="164" width="64" height="44" rx="14" fill="#141D31" stroke="#24324A"/>
+    <rect x="942" y="164" width="64" height="44" rx="14" fill="#141D31" stroke="#24324A"/>
+    <text x="638" y="192" text-anchor="middle" fill="#F4F4F5" font-size="16" font-family="Segoe UI, Arial, sans-serif">Tout</text>
+    <text x="722" y="192" text-anchor="middle" fill="#F4F4F5" font-size="16" font-family="Segoe UI, Arial, sans-serif">En attente</text>
+    <text x="818" y="192" text-anchor="middle" fill="#F4F4F5" font-size="16" font-family="Segoe UI, Arial, sans-serif">En cours</text>
+    <text x="900" y="192" text-anchor="middle" fill="#F4F4F5" font-size="16" font-family="Segoe UI, Arial, sans-serif">Livree</text>
+    <text x="974" y="192" text-anchor="middle" fill="#F4F4F5" font-size="16" font-family="Segoe UI, Arial, sans-serif">Payee</text>
+  </g>
+  <rect x="1034" y="164" width="210" height="44" rx="14" fill="url(#orange)"/>
+  <text x="1139" y="192" text-anchor="middle" fill="#FFF7F1" font-size="18" font-family="Segoe UI, Arial, sans-serif" font-weight="700">Nouvelle commande</text>
+  <rect x="304" y="236" width="940" height="420" rx="26" fill="#07101F" stroke="#1B3150"/>
+  <text x="328" y="282" fill="#F4F4F5" font-size="26" font-family="Segoe UI, Arial, sans-serif" font-weight="700">Commandes (8)</text>
+  <rect x="304" y="314" width="940" height="54" fill="#121A2C"/>
+  <g fill="#52607A" font-size="16" font-family="Segoe UI, Arial, sans-serif" font-weight="700">
+    <text x="322" y="346">#</text>
+    <text x="380" y="346">CLIENT</text>
+    <text x="508" y="346">ENTREPRISE</text>
+    <text x="660" y="346">LIVREUR</text>
+    <text x="810" y="346">MONTANT</text>
+    <text x="942" y="346">STATUT</text>
+    <text x="1060" y="346">DATE</text>
+  </g>
+  <g>
+    <rect x="304" y="368" width="940" height="58" fill="#08101E"/>
+    <rect x="304" y="426" width="940" height="58" fill="#091221"/>
+    <rect x="304" y="484" width="940" height="58" fill="#08101E"/>
+    <rect x="304" y="542" width="940" height="58" fill="#091221"/>
+  </g>
+  <g font-size="18" font-family="Segoe UI, Arial, sans-serif">
+    <text x="322" y="405" fill="#D9E1EE">#12</text><text x="380" y="405" fill="#E7EDF6">Sarah</text><text x="508" y="405" fill="#E7EDF6">Kenature</text><text x="660" y="405" fill="#E7EDF6">Justin</text><text x="810" y="405" fill="#22D06F">120 000 MGA</text><text x="942" y="405" fill="#FFB326">En attente</text><text x="1060" y="405" fill="#8290A7">2026-03-07</text>
+    <text x="322" y="463" fill="#D9E1EE">#11</text><text x="380" y="463" fill="#E7EDF6">Micka</text><text x="508" y="463" fill="#E7EDF6">General</text><text x="660" y="463" fill="#E7EDF6">Jean</text><text x="810" y="463" fill="#22D06F">90 000 MGA</text><text x="942" y="463" fill="#4DA3FF">En cours</text><text x="1060" y="463" fill="#8290A7">2026-03-07</text>
+    <text x="322" y="521" fill="#D9E1EE">#10</text><text x="380" y="521" fill="#E7EDF6">Nina</text><text x="508" y="521" fill="#E7EDF6">Kenature</text><text x="660" y="521" fill="#E7EDF6">Justin</text><text x="810" y="521" fill="#22D06F">58 000 MGA</text><text x="942" y="521" fill="#20C96E">Livree</text><text x="1060" y="521" fill="#8290A7">2026-03-06</text>
+    <text x="322" y="579" fill="#D9E1EE">#09</text><text x="380" y="579" fill="#E7EDF6">Lova</text><text x="508" y="579" fill="#E7EDF6">General</text><text x="660" y="579" fill="#E7EDF6">Jean</text><text x="810" y="579" fill="#22D06F">74 000 MGA</text><text x="942" y="579" fill="#B0C4D8">Payee</text><text x="1060" y="579" fill="#8290A7">2026-03-06</text>
+  </g>
+</svg>
