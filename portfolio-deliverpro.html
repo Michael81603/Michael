@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta content="IE=edge" http-equiv="X-UA-Compatible">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <title>Etude de cas | DeliverPro, application desktop de gestion</title>
+    <title>Etude de cas | DeliverPro, plateforme de gestion de livraison</title>
     <link href="styles.css" rel="stylesheet">
     <script defer src="app.js"></script>
 </head>
@@ -21,10 +21,10 @@
             <a class="portfolio-back" href="index.html">Retour au portfolio</a>
             <div class="ligne-separateur"></div>
             <h1 class="portfolio">Etude de cas</h1>
-            <h2 class="portfolio">DeliverPro, application desktop de gestion de livraison</h2>
+            <h2 class="portfolio">DeliverPro, plateforme de gestion de livraison</h2>
             <p class="portfolio-lead">
-                Une application desktop de pilotage concue pour centraliser les commandes,
-                les utilisateurs, les entreprises partenaires et les finances dans un seul back-office.
+                Une plateforme composee d'un back-office desktop, d'une API metier et d'une application Flutter
+                pour centraliser les commandes, les utilisateurs, les entreprises partenaires et les finances.
             </p>
         </div>
     </section>
@@ -38,27 +38,113 @@
                     DeliverPro a ete concu pour repondre a un besoin metier concret : suivre une activite
                     de livraison depuis une seule interface, sans alterner entre plusieurs tableaux, fichiers
                     ou espaces de travail. L'objectif etait de donner a l'administrateur une vision claire
-                    de l'activite, du statut des commandes jusqu'au suivi financier global.
+                    de l'activite, tout en fournissant une API metier exploitable et une application mobile
+                    pour les parcours admin et livreur.
                 </p>
             </div>
 
             <div class="detail-grid">
                 <article class="detail-card">
                     <h3>Defi</h3>
-                    <p>Centraliser les operations quotidiennes et les indicateurs financiers dans une interface claire, rapide et simple a prendre en main.</p>
+                    <p>Centraliser les operations quotidiennes et les indicateurs financiers, puis partager la meme logique metier entre poste admin et usage mobile.</p>
                 </article>
                 <article class="detail-card">
                     <h3>Solution</h3>
-                    <p>Une application desktop React + Electron connectee a une API metier, avec authentification admin, dashboard global, modules de gestion et export.</p>
+                    <p>Un back-office React + Electron pour l'administration, une API Django REST securisee par JWT et une application Flutter pour les parcours admin et livreur.</p>
                 </article>
                 <article class="detail-card">
                     <h3>Resultat</h3>
-                    <p>Les commandes, les utilisateurs, les entreprises et les finances sont regroupes dans un poste de pilotage unique et plus lisible.</p>
+                    <p>Les commandes, les utilisateurs, les entreprises et les finances sont regroupes dans un meme ecosysteme de travail, du back-office jusqu'au livreur.</p>
                 </article>
                 <article class="detail-card">
                     <h3>Technologies</h3>
-                    <p>React, Vite, Electron, API REST, JWT, packaging Windows et logique de gestion metier.</p>
+                    <p>React, Vite, Electron, Django, Django REST Framework, PostgreSQL, Flutter, JWT et packaging Windows.</p>
                 </article>
+            </div>
+
+            <div class="detail-block">
+                <h3>Architecture du produit</h3>
+                <p>
+                    DeliverPro n'est pas seulement une interface d'administration. Le projet a ete pense comme
+                    une base produit complete, avec trois briques reliees par la meme API.
+                </p>
+                <div class="detail-grid">
+                    <article class="detail-card">
+                        <h3>Back-office desktop admin</h3>
+                        <p>Le back-office React + Electron sert a gerer les commandes, les entreprises, les utilisateurs, les finances et les exports PDF depuis un poste fixe.</p>
+                    </article>
+                    <article class="detail-card">
+                        <h3>API metier Django</h3>
+                        <p>L'API REST centralise l'authentification JWT, les regles de gestion, les dashboards, les transactions, les objectifs, les exports et les donnees partagees par tous les clients.</p>
+                    </article>
+                    <article class="detail-card">
+                        <h3>Application Flutter terrain</h3>
+                        <p>L'application mobile Flutter couvre les parcours admin et livreur, avec connexion securisee, suivi des commandes, finances, entreprises et operations rapides depuis smartphone.</p>
+                    </article>
+                    <article class="detail-card">
+                        <h3>Flux unifie</h3>
+                        <p>Le desktop admin et le mobile utilisent le meme backend pour garder des donnees coherentes, synchroniser l'operationnel et eviter les doubles saisies.</p>
+                    </article>
+                </div>
+            </div>
+
+            <div class="detail-block">
+                <p class="section-kicker">Backend</p>
+                <h3>API REST Django comme noyau technique du produit</h3>
+                <p>
+                    Le backend DeliverPro a ete developpe avec Django et Django REST Framework pour servir
+                    de couche metier unique entre le back-office desktop React + Electron et l'application Flutter.
+                    C'est lui qui porte la logique centrale du produit : droits d'acces, donnees PostgreSQL,
+                    calculs financiers, dashboards, historique, export PDF et exposition des ressources metier.
+                </p>
+                <div class="detail-grid">
+                    <article class="detail-card">
+                        <h3>Authentification et securite</h3>
+                        <p>Connexion JWT avec access token et refresh token, logout, profil utilisateur, changement de mot de passe et permissions distinctes pour les roles admin et livreur.</p>
+                    </article>
+                    <article class="detail-card">
+                        <h3>Ressources metier</h3>
+                        <p>CRUD des utilisateurs, entreprises, commandes, transactions, objectifs et journaux d'audit, avec filtres, pagination et relations coherentes entre les entites.</p>
+                    </article>
+                    <article class="detail-card">
+                        <h3>Services exposes</h3>
+                        <p>Dashboards admin et livreur, alertes budgetaires, paiements, export PDF, statistiques par entreprise et automatisations metier reliees au cycle de livraison.</p>
+                    </article>
+                    <article class="detail-card">
+                        <h3>Exploitation et qualite</h3>
+                        <p>Documentation Swagger, tests API sur les cas critiques, configuration de deploiement, CORS, WebSocket temps reel et backend exploitable par plusieurs clients, desktop comme mobile.</p>
+                    </article>
+                </div>
+                <div class="api-endpoint-grid">
+                    <article class="api-endpoint">
+                        <code>/api/auth/login/</code>
+                        <p>Point d'entree pour l'authentification JWT et l'ouverture de session metier.</p>
+                    </article>
+                    <article class="api-endpoint">
+                        <code>/api/dashboard/</code>
+                        <p>Dashboard global admin avec synthese des revenus, depenses, commandes et indicateurs.</p>
+                    </article>
+                    <article class="api-endpoint">
+                        <code>/api/dashboard/livreur/</code>
+                        <p>Vue ciblee pour le terrain, adaptee au role livreur et a ses propres commandes.</p>
+                    </article>
+                    <article class="api-endpoint">
+                        <code>/api/commandes/</code>
+                        <p>Gestion complete des commandes, progression des statuts et suivi du cycle de livraison.</p>
+                    </article>
+                    <article class="api-endpoint">
+                        <code>/api/transactions/</code>
+                        <p>Journal financier, revenus, depenses et historique exploitable pour les modules finance.</p>
+                    </article>
+                    <article class="api-endpoint">
+                        <code>/api/export/pdf/</code>
+                        <p>Generation de rapports filtres par periode, entreprise, livreur et type de contenu.</p>
+                    </article>
+                </div>
+                <div class="detail-note">
+                    Le backend joue ici le role de source de verite : les deux interfaces clientes consomment
+                    les memes endpoints pour garantir la coherence des donnees et la fiabilite du suivi.
+                </div>
             </div>
 
             <div class="detail-block">
@@ -71,7 +157,8 @@
                     <li>Un espace finance pour suivre revenus, depenses, benefice net et historique des transactions.</li>
                     <li>Un module objectifs et budget pour cadrer les seuils de suivi mensuels.</li>
                     <li>Un export PDF filtre par periode, entreprise, livreur et type de contenu.</li>
-                    <li>Une authentification admin desktop pour reserver l'acces au back-office.</li>
+                    <li>Une authentification JWT partagee entre le back-office admin, l'API et l'application Flutter.</li>
+                    <li>Une application mobile Flutter pour les parcours admin et livreur, avec suivi des commandes, finances et historique des paiements.</li>
                     <li>Une version desktop Windows pour une utilisation directe sur poste de travail.</li>
                 </ul>
             </div>
@@ -81,69 +168,69 @@
                 <p>
                     Ce projet montre ma capacite a concevoir une vraie interface metier : un outil qui ne se contente
                     pas d'etre visuel, mais qui sert au pilotage quotidien d'une activite. L'application transforme des
-                    donnees operationnelles en informations directement exploitables, avec une interface admin lisible
-                    et un flux de travail pense pour l'efficacite.
+                    donnees operationnelles en informations directement exploitables, avec une interface admin lisible,
+                    une API reutilisable et un usage mobile pense pour l'efficacite sur le terrain.
                 </p>
             </div>
 
             <div class="detail-block">
-                <h3>Vues du produit</h3>
+                <h3>Vues du back-office desktop</h3>
                 <p>
-                    L'application a ete pensee comme un outil de bureau moderne, avec une interface sombre,
+                    Le back-office a ete pense comme un outil de bureau moderne, avec une interface sombre,
                     une navigation laterale claire et des ecrans specialises pour chaque besoin metier.
                 </p>
                 <div class="screenshot-grid">
                     <figure class="screen-shot">
-                        <img alt="Connexion admin DeliverPro" class="image-portfolio js-lightbox" data-caption="Connexion admin" src="deliverpro-captures/connexion-admin.png">
+                        <img alt="Connexion admin DeliverPro" class="image-portfolio js-lightbox" data-caption="Connexion admin" decoding="async" loading="lazy" src="deliverpro-captures/connexion-admin.png">
                         <figcaption>
                             <strong>Connexion admin</strong>
                             Ecran de connexion dedie a l'administration desktop, avec acces reserve au back-office.
                         </figcaption>
                     </figure>
                     <figure class="screen-shot">
-                        <img alt="Dashboard global DeliverPro" class="image-portfolio js-lightbox" data-caption="Dashboard global" src="deliverpro-captures/dashboard-global.png">
+                        <img alt="Dashboard global DeliverPro" class="image-portfolio js-lightbox" data-caption="Dashboard global" decoding="async" loading="lazy" src="deliverpro-captures/dashboard-global.png">
                         <figcaption>
                             <strong>Dashboard global</strong>
                             Vue d'ensemble des revenus, depenses, benefice net et repartition visuelle pour lire l'activite rapidement.
                         </figcaption>
                     </figure>
                     <figure class="screen-shot">
-                        <img alt="Gestion des commandes DeliverPro" class="image-portfolio js-lightbox" data-caption="Gestion des commandes" src="deliverpro-captures/gestion-commandes.png">
+                        <img alt="Gestion des commandes DeliverPro" class="image-portfolio js-lightbox" data-caption="Gestion des commandes" decoding="async" loading="lazy" src="deliverpro-captures/gestion-commandes.png">
                         <figcaption>
                             <strong>Gestion des commandes</strong>
                             Recherche, filtres par statut, creation rapide et suivi des livraisons dans une table de travail unique.
                         </figcaption>
                     </figure>
                     <figure class="screen-shot">
-                        <img alt="Gestion des utilisateurs DeliverPro" class="image-portfolio js-lightbox" data-caption="Gestion des utilisateurs" src="deliverpro-captures/gestion-utilisateurs.png">
+                        <img alt="Gestion des utilisateurs DeliverPro" class="image-portfolio js-lightbox" data-caption="Gestion des utilisateurs" decoding="async" loading="lazy" src="deliverpro-captures/gestion-utilisateurs.png">
                         <figcaption>
                             <strong>Gestion des utilisateurs</strong>
                             Administration des comptes, roles et statuts pour garder le controle sur les acces et les profils.
                         </figcaption>
                     </figure>
                     <figure class="screen-shot">
-                        <img alt="Gestion des entreprises DeliverPro" class="image-portfolio js-lightbox" data-caption="Gestion des entreprises" src="deliverpro-captures/gestion-entreprises.png">
+                        <img alt="Gestion des entreprises DeliverPro" class="image-portfolio js-lightbox" data-caption="Gestion des entreprises" decoding="async" loading="lazy" src="deliverpro-captures/gestion-entreprises.png">
                         <figcaption>
                             <strong>Gestion des entreprises</strong>
                             Vue dediee aux partenaires avec revenu, benefice et acces direct a leur espace de suivi.
                         </figcaption>
                     </figure>
                     <figure class="screen-shot">
-                        <img alt="Gestion financiere DeliverPro" class="image-portfolio js-lightbox" data-caption="Gestion financiere" src="deliverpro-captures/gestion-financiere.png">
+                        <img alt="Gestion financiere DeliverPro" class="image-portfolio js-lightbox" data-caption="Gestion financiere" decoding="async" loading="lazy" src="deliverpro-captures/gestion-financiere.png">
                         <figcaption>
                             <strong>Gestion financiere</strong>
                             Journal des transactions, synthese des revenus et depenses, et lecture immediate du benefice net.
                         </figcaption>
                     </figure>
                     <figure class="screen-shot">
-                        <img alt="Objectifs et budget DeliverPro" class="image-portfolio js-lightbox" data-caption="Objectifs et budget" src="deliverpro-captures/objectifs-budget.png">
+                        <img alt="Objectifs et budget DeliverPro" class="image-portfolio js-lightbox" data-caption="Objectifs et budget" decoding="async" loading="lazy" src="deliverpro-captures/objectifs-budget.png">
                         <figcaption>
                             <strong>Objectifs &amp; Budget</strong>
                             Ecran dedie au cadrage des objectifs de revenu et des plafonds de depense.
                         </figcaption>
                     </figure>
                     <figure class="screen-shot">
-                        <img alt="Export PDF DeliverPro" class="image-portfolio js-lightbox" data-caption="Export PDF" src="deliverpro-captures/export-pdf.png">
+                        <img alt="Export PDF DeliverPro" class="image-portfolio js-lightbox" data-caption="Export PDF" decoding="async" loading="lazy" src="deliverpro-captures/export-pdf.png">
                         <figcaption>
                             <strong>Export PDF</strong>
                             Generation de rapports filtres par dates, entreprise, livreur et type de contenu.
@@ -151,11 +238,122 @@
                     </figure>
                 </div>
             </div>
+
+            <div class="detail-block">
+                <p class="section-kicker">Flutter</p>
+                <h3>Vues de l'application mobile Flutter</h3>
+                <p>
+                    En plus du poste admin desktop, DeliverPro dispose d'une interface mobile Flutter connectee
+                    au meme backend Django REST. Les captures ci-dessous montrent la declinaison smartphone
+                    du produit, avec une navigation rapide, des actions metier directes et des modules adaptes
+                    a l'usage mobile.
+                </p>
+                <div class="mobile-gallery-group">
+                    <p class="section-kicker">Mode livreur</p>
+                    <h4 class="mobile-gallery-title">Application mobile livreur</h4>
+                    <p class="mobile-gallery-copy">
+                        Le parcours livreur donne une lecture immediate des commandes assignees, des statuts de
+                        livraison et des paiements encaisses, avec une interface simple a utiliser sur le terrain.
+                    </p>
+                    <div class="mobile-screenshot-grid">
+                        <figure class="screen-shot mobile-shot">
+                            <img alt="Dashboard livreur DeliverPro" class="image-portfolio js-lightbox" data-caption="Dashboard livreur" decoding="async" loading="lazy" src="deliverpro-captures/livreur-dashboard.jpg">
+                            <figcaption>
+                                <strong>Dashboard livreur</strong>
+                                Vue de synthese des commandes, paiements et etats de livraison pour piloter la journee.
+                            </figcaption>
+                        </figure>
+                        <figure class="screen-shot mobile-shot">
+                            <img alt="Commandes livreur DeliverPro" class="image-portfolio js-lightbox" data-caption="Commandes livreur" decoding="async" loading="lazy" src="deliverpro-captures/livreur-commandes.jpg">
+                            <figcaption>
+                                <strong>Mes commandes</strong>
+                                Filtrage rapide par statut pour suivre les livraisons en attente, en cours, livrees ou payees.
+                            </figcaption>
+                        </figure>
+                        <figure class="screen-shot mobile-shot">
+                            <img alt="Historique des paiements livreur DeliverPro" class="image-portfolio js-lightbox" data-caption="Historique paiements livreur" decoding="async" loading="lazy" src="deliverpro-captures/livreur-historique.jpg">
+                            <figcaption>
+                                <strong>Historique paiements</strong>
+                                Consultation des encaissements et lecture rapide des revenus directement depuis le mobile.
+                            </figcaption>
+                        </figure>
+                    </div>
+                </div>
+                <div class="mobile-gallery-group">
+                    <p class="section-kicker">Mode admin</p>
+                    <h4 class="mobile-gallery-title">Application mobile admin</h4>
+                    <p class="mobile-gallery-copy">
+                        L'application admin mobile reutilise le meme backend Django REST pour administrer les commandes,
+                        les entreprises partenaires, les finances et les exports, sans dependre du poste desktop.
+                    </p>
+                    <div class="mobile-screenshot-grid">
+                        <figure class="screen-shot mobile-shot">
+                            <img alt="Connexion mobile admin DeliverPro" class="image-portfolio js-lightbox" data-caption="Connexion mobile admin" decoding="async" loading="lazy" src="deliverpro-captures/admin-login.jpg">
+                            <figcaption>
+                                <strong>Connexion securisee</strong>
+                                Ecran d'authentification mobile relie a l'API JWT pour ouvrir le bon parcours selon le profil utilisateur.
+                            </figcaption>
+                        </figure>
+                        <figure class="screen-shot mobile-shot">
+                            <img alt="Commandes admin DeliverPro" class="image-portfolio js-lightbox" data-caption="Commandes admin" decoding="async" loading="lazy" src="deliverpro-captures/admin-commandes.jpg">
+                            <figcaption>
+                                <strong>Commandes</strong>
+                                Gestion mobile des commandes avec filtres par statut et action rapide de creation.
+                            </figcaption>
+                        </figure>
+                        <figure class="screen-shot mobile-shot">
+                            <img alt="Entreprises admin DeliverPro" class="image-portfolio js-lightbox" data-caption="Entreprises admin" decoding="async" loading="lazy" src="deliverpro-captures/admin-entreprises.jpg">
+                            <figcaption>
+                                <strong>Entreprises</strong>
+                                Suivi des partenaires, consultation des informations utiles et operation directe depuis le mobile.
+                            </figcaption>
+                        </figure>
+                        <figure class="screen-shot mobile-shot">
+                            <img alt="Finances admin DeliverPro" class="image-portfolio js-lightbox" data-caption="Finances admin" decoding="async" loading="lazy" src="deliverpro-captures/admin-finances.jpg">
+                            <figcaption>
+                                <strong>Finances</strong>
+                                Lecture des revenus, depenses et transactions avec une vue mobile claire et immediate.
+                            </figcaption>
+                        </figure>
+                        <figure class="screen-shot mobile-shot">
+                            <img alt="Objectifs et export admin DeliverPro" class="image-portfolio js-lightbox" data-caption="Objectifs et export admin" decoding="async" loading="lazy" src="deliverpro-captures/admin-objectifs-export.jpg">
+                            <figcaption>
+                                <strong>Objectifs et export</strong>
+                                Gestion des objectifs et generation de PDF filtres directement dans l'application mobile.
+                            </figcaption>
+                        </figure>
+                    </div>
+                </div>
+                <div class="detail-note">
+                    Code source non public pour raisons de confidentialite professionnelle. La page presente
+                    l'architecture, les usages et les ecrans sans exposer les depots du client.
+                </div>
+            </div>
         </div>
     </section>
 
     <section class="section" id="contact">
-        <iframe scrolling="no" src="contact-frame.html" title="Contact portfolio"></iframe>
+        <div class="frame contact-frame-layout">
+            <p class="frame-title">Parlons de votre projet</p>
+            <div class="contact-frame-body">
+                <img alt="Photo de profil" class="contact-frame-photo" decoding="async" loading="lazy" src="profile.jpg">
+                <div class="contact-frame-copy">
+                    <p>
+                        Besoin d'un site web, d'une interface de gestion ou d'une application simple a utiliser ?
+                        Je peux vous aider a cadrer le besoin puis a realiser une solution concrete.
+                    </p>
+                    <p>
+                        <a href="mailto:fenotianamichael81@gmail.com">Contactez-moi par email</a>
+                        ou directement par telephone au
+                        <a href="tel:+261377817771">+261 37 78 17 771</a>.
+                    </p>
+                    <div class="contact-actions">
+                        <button class="btn-copy" data-copy="fenotianamichael81@gmail.com" type="button">Copier email</button>
+                        <button class="btn-copy" data-copy="+261377817771" type="button">Copier telephone</button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 </body>
 </html>

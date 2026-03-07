@@ -15,7 +15,7 @@
             <p><a href="tel:+261377817771">+261 37 78 17 771</a></p>
         </div>
 
-        <img alt="Portrait de Fenotiana Michael" class="profile-cover" src="profile.jpg">
+        <img alt="Portrait de Fenotiana Michael" class="profile-cover" decoding="async" src="profile.jpg">
         <p class="cover-kicker">Portfolio freelance</p>
         <h1>RAKOTOMALALA Fenotiana Michael</h1>
         <p class="cover-role">Developpeur web et mobile</p>
@@ -111,21 +111,21 @@
         <div class="case-grid">
             <article class="case-card case-card-featured">
                 <a class="case-media" href="portfolio-deliverpro.html">
-                    <img alt="Vue dashboard de l'application DeliverPro" src="deliverpro-captures/dashboard-global.png">
+                    <img alt="Vue dashboard de l'application DeliverPro" decoding="async" loading="lazy" src="deliverpro-captures/dashboard-global.png">
                 </a>
                 <div class="case-content">
                     <p class="case-tag">Etude de cas 01</p>
-                    <h3>DeliverPro, application desktop de gestion de livraison</h3>
+                    <h3>DeliverPro, plateforme de gestion de livraison</h3>
                     <p class="case-summary">
-                        Un back-office desktop concu pour suivre les commandes, les utilisateurs,
-                        les entreprises et les finances depuis une seule interface de travail.
+                        Une solution complete avec back-office desktop, API metier et application Flutter
+                        pour piloter les commandes, les partenaires, les finances et le travail terrain.
                     </p>
                     <div class="case-points">
                         <p><strong>Defi :</strong> Eviter de gerer l'activite entre plusieurs fichiers, vues et outils disperses.</p>
-                        <p><strong>Solution :</strong> Une application React + Electron avec authentification admin, dashboard global et modules de gestion relies a l'API.</p>
-                        <p><strong>Resultat :</strong> Un poste de pilotage unique pour suivre l'operationnel, les revenus, les depenses et la performance des partenaires.</p>
+                        <p><strong>Solution :</strong> Un back-office React + Electron pour l'administration, une API Django REST securisee par JWT et une application Flutter pour les parcours admin et livreur.</p>
+                        <p><strong>Resultat :</strong> Un meme socle technique pour piloter le back-office, exposer la logique metier et faire avancer les livraisons depuis mobile.</p>
                     </div>
-                    <p class="case-stack">React, Vite, Electron, API REST, JWT</p>
+                    <p class="case-stack">React, Vite, Electron, Django REST, PostgreSQL, Flutter, JWT</p>
                     <div class="case-actions">
                         <a class="case-link primary" href="portfolio-deliverpro.html">Voir l'etude de cas</a>
                     </div>
@@ -134,7 +134,7 @@
 
             <article class="case-card">
                 <a class="case-media" href="portfolio-site-restaurant.html">
-                    <img alt="Capture du site de restaurant" src="menupizza.PNG">
+                    <img alt="Capture du site de restaurant" decoding="async" loading="lazy" src="menupizza.PNG">
                 </a>
                 <div class="case-content">
                     <p class="case-tag">Etude de cas 02</p>
@@ -158,7 +158,7 @@
 
             <article class="case-card">
                 <a class="case-media" href="portfolio-site-gestion-revenu.html">
-                    <img alt="Capture de l'application de gestion des revenus" src="tout les cature/Capture4.PNG">
+                    <img alt="Capture de l'application de gestion des revenus" decoding="async" loading="lazy" src="tout les cature/Capture4.PNG">
                 </a>
                 <div class="case-content">
                     <p class="case-tag">Etude de cas 03</p>
@@ -191,7 +191,27 @@
                 je peux vous aider a cadrer le besoin et a realiser une solution concrete.
             </p>
         </div>
-        <iframe scrolling="no" src="contact-frame.html" title="Contact portfolio"></iframe>
+        <div class="frame contact-frame-layout">
+            <p class="frame-title">Parlons de votre projet</p>
+            <div class="contact-frame-body">
+                <img alt="Photo de profil" class="contact-frame-photo" decoding="async" loading="lazy" src="profile.jpg">
+                <div class="contact-frame-copy">
+                    <p>
+                        Besoin d'un site web, d'une interface de gestion ou d'une application simple a utiliser ?
+                        Je peux vous aider a cadrer le besoin puis a realiser une solution concrete.
+                    </p>
+                    <p>
+                        <a href="mailto:fenotianamichael81@gmail.com">Contactez-moi par email</a>
+                        ou directement par telephone au
+                        <a href="tel:+261377817771">+261 37 78 17 771</a>.
+                    </p>
+                    <div class="contact-actions">
+                        <button class="btn-copy" data-copy="fenotianamichael81@gmail.com" type="button">Copier email</button>
+                        <button class="btn-copy" data-copy="+261377817771" type="button">Copier telephone</button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 </body>
 </html>

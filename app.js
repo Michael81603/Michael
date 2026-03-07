@@ -74,25 +74,7 @@
   }
 
   function setupReveal() {
-    const sections = qsa(".section");
-    if (!sections.length) return;
-
-    sections.forEach((section) => section.classList.add("reveal"));
-
-    if (!("IntersectionObserver" in window)) {
-      sections.forEach((section) => section.classList.add("reveal-visible"));
-      return;
-    }
-
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (!entry.isIntersecting) return;
-        entry.target.classList.add("reveal-visible");
-        observer.unobserve(entry.target);
-      });
-    }, { threshold: 0.12 });
-
-    sections.forEach((section) => observer.observe(section));
+    return;
   }
 
   async function copyText(text) {
@@ -130,7 +112,7 @@
   }
 
   function setupLightbox() {
-    const images = qsa("img.js-lightbox, img.image-portfolio");
+    const images = qsa("img.js-lightbox");
     if (!images.length) return;
 
     let overlay = qs(".lightbox");
