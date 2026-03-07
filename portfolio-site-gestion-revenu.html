@@ -1,61 +1,100 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Site web de restaurant</title>
-    <link rel="stylesheet" href="styles.css">
+    <meta charset="utf-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Etude de cas | Application de gestion des revenus</title>
+    <link href="styles.css" rel="stylesheet">
+    <script defer src="app.js"></script>
 </head>
 <body>
-    <!--HEADER-->
-    <div class="porfofio-header" style="position: relative;">
-        <div class="text-ligne" style="margin-left: 16px; margin-top: 20px;">
+    <div class="porfofio-header">
+        <div class="portfolio-header-inner">
             <p class="text-ligne-portfolio-titre">RAKOTOMALALA Fenotiana Michael</p>
+            <a class="contact-button contact-button-portolio" href="mailto:fenotianamichael81@gmail.com">ME CONTACTER</a>
         </div>
-        <a class="contact-button contact-button-portolio" href="mailto:fenotianamichael81@gmail.com">ME CONTACTER</a>
     </div>
-    <!--SECTION GRIS TITRE-->
-    <div class="section section-gris1" style="padding-top: 20px;">
-        <a class="portfolio-back" href="index.html">Retour</a>
-        <div class="ligne-separateur" style="margin-top: -12px;"></div>
-        <h1 class="portfolio">Portfolio</h1>
-        <h2 class="portfolio">FinanceTracker – Application de Gestion de Revenus et Dépenses</h2>
-    </div>
-    <!--SECTION CONTENU-->
-    <div class="section">
-        <div class="text-ligne">
-            <p>Application permettant d’enregistrer, organiser et analyser les revenus et les dépenses afin d’améliorer la gestion budgétaire.<br>
-Elle offre un suivi clair du solde, un historique des transactions et un résumé des performances financières.<br><br>
 
-Fonctionnalités principales :<br>
+    <section class="section section-gris1 portfolio-hero">
+        <div class="portfolio-hero-inner">
+            <a class="portfolio-back" href="index.html">Retour au portfolio</a>
+            <div class="ligne-separateur"></div>
+            <h1 class="portfolio">Etude de cas</h1>
+            <h2 class="portfolio">Application de gestion des revenus et depenses</h2>
+            <p class="portfolio-lead">
+                Une application de suivi budgetaire qui centralise les transactions,
+                automatise les calculs utiles et rend l'analyse plus lisible.
+            </p>
+        </div>
+    </section>
 
-Gestion des revenus et dépenses (CRUD)<br>
+    <section class="section">
+        <div class="detail-layout">
+            <div class="detail-block">
+                <p class="case-tag">Contexte</p>
+                <h3>Structurer le suivi financier dans une interface simple</h3>
+                <p>
+                    Ce projet applicatif a ete concu pour faciliter l'enregistrement, l'organisation et
+                    l'analyse des revenus et des depenses. L'objectif principal etait de centraliser les
+                    informations utiles dans une interface claire, sans multiplier les ecrans ou les manipulations.
+                </p>
+            </div>
 
-Calcul automatique du solde<br>
+            <div class="detail-grid">
+                <article class="detail-card">
+                    <h3>Defi</h3>
+                    <p>Rendre le suivi budgetaire plus lisible avec un historique exploitable et une vision immediate du solde.</p>
+                </article>
+                <article class="detail-card">
+                    <h3>Solution</h3>
+                    <p>Une application Streamlit reliee a FastAPI et completee par des visualisations Plotly pour mieux lire les donnees.</p>
+                </article>
+                <article class="detail-card">
+                    <h3>Resultat</h3>
+                    <p>Les transactions, categories et indicateurs financiers sont regroupes dans un seul espace de travail.</p>
+                </article>
+                <article class="detail-card">
+                    <h3>Technologies</h3>
+                    <p>Streamlit, Plotly, FastAPI et Python pour combiner interface, logique metier et visualisation.</p>
+                </article>
+            </div>
 
-Catégorisation des transactions<br>
+            <div class="detail-block">
+                <h3>Fonctionnalites principales</h3>
+                <ul class="feature-list">
+                    <li>Ajout, modification et suppression des revenus et des depenses.</li>
+                    <li>Calcul automatique du solde disponible.</li>
+                    <li>Categorisation des transactions pour faciliter l'analyse.</li>
+                    <li>Historique clair des operations enregistrees.</li>
+                    <li>Resume et graphiques pour visualiser les performances financieres.</li>
+                </ul>
+            </div>
 
-Résumé et statistiques financières<br>
-
-Interface simple et intuitive<br><br>
-                <u>Technologies utilisées</u> : <b> Streamlit, Plotly, FastAPI, PYTHON </b></p>
-                <div style="text-align: center; margin-top: 45px;">
-                    <p><img src="tout les cature/Capture.PNG" alt="" class="image-portfolio"></p>
-                    <p><img src="tout les cature/Capture2.PNG" alt="" class="image-portfolio"></p>
-                    <p><img src="tout les cature/Capture3.PNG" alt="" class="image-portfolio"></p>
-                    <p><img src="tout les cature/Capture4.PNG" alt="" class="image-portfolio"></p>
-                    <p><img src="tout les cature/Capture5.PNG" alt="" class="image-portfolio"></p>
-                    <p><img src="tout les cature/Capture6.PNG" alt="" class="image-portfolio"></p>
-                    <p><img src="tout les cature/Capture7.PNG" alt="" class="image-portfolio"></p>
-            
-                    <p style="margin-top: 8px;"><a href="https://github.com/Michael81603/gestion_revenu.git" target="_blank">Voir le code sur github</a></p>
+            <div class="detail-block">
+                <h3>Captures du projet</h3>
+                <p>
+                    Les captures suivantes montrent l'interface, les vues de suivi et les elements
+                    utilises pour analyser les donnees plus rapidement.
+                </p>
+                <div class="screenshot-grid">
+                    <img alt="Vue principale de l'application" class="image-portfolio js-lightbox" data-caption="Vue principale" src="tout les cature/Capture.PNG">
+                    <img alt="Tableau de suivi budgetaire" class="image-portfolio js-lightbox" data-caption="Suivi budgetaire" src="tout les cature/Capture2.PNG">
+                    <img alt="Resume des transactions" class="image-portfolio js-lightbox" data-caption="Resume des transactions" src="tout les cature/Capture3.PNG">
+                    <img alt="Analyse des revenus et depenses" class="image-portfolio js-lightbox" data-caption="Analyse des revenus et depenses" src="tout les cature/Capture4.PNG">
+                    <img alt="Visualisation financiere" class="image-portfolio js-lightbox" data-caption="Visualisation financiere" src="tout les cature/Capture5.PNG">
+                    <img alt="Historique des operations" class="image-portfolio js-lightbox" data-caption="Historique des operations" src="tout les cature/Capture6.PNG">
+                    <img alt="Ecran complementaire de l'application" class="image-portfolio js-lightbox" data-caption="Vue complementaire" src="tout les cature/Capture7.PNG">
                 </div>
+                <p class="project-link-row">
+                    <a class="case-link primary" href="https://github.com/Michael81603/gestion_revenu.git" rel="noreferrer" target="_blank">Voir le code sur GitHub</a>
+                </p>
+            </div>
         </div>
-    </div>
-    <!--FRAME-->
-    <div class="section">
-        <iframe src="contact-frame.html" scrolling="no"/>
-    </div>
+    </section>
+
+    <section class="section" id="contact">
+        <iframe scrolling="no" src="contact-frame.html" title="Contact portfolio"></iframe>
+    </section>
 </body>
 </html>

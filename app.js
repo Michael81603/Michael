@@ -1,106 +1,118 @@
 (() => {
   "use strict";
 
-  function qs(sel, root = document) { return root.querySelector(sel); }
-  function qsa(sel, root = document) { return Array.from(root.querySelectorAll(sel)); }
+  function qs(selector, root = document) {
+    return root.querySelector(selector);
+  }
 
-  // Toast
+  function qsa(selector, root = document) {
+    return Array.from(root.querySelectorAll(selector));
+  }
+
   let toastEl = null;
   let toastTimer = null;
+
   function ensureToast() {
     if (toastEl) return toastEl;
+
     toastEl = document.createElement("div");
     toastEl.className = "toast";
     toastEl.setAttribute("role", "status");
     toastEl.setAttribute("aria-live", "polite");
     document.body.appendChild(toastEl);
+
     return toastEl;
   }
-  function toast(msg) {
+
+  function toast(message) {
     const el = ensureToast();
-    el.textContent = msg;
+    el.textContent = message;
     el.classList.add("toast-show");
+
     if (toastTimer) window.clearTimeout(toastTimer);
-    toastTimer = window.setTimeout(() => el.classList.remove("toast-show"), 1500);
+    toastTimer = window.setTimeout(() => {
+      el.classList.remove("toast-show");
+    }, 1500);
   }
 
-  // Back to top button
   function setupBackToTop() {
     if (qs("#backToTop")) return;
-    const btn = document.createElement("button");
-    btn.id = "backToTop";
-    btn.type = "button";
-    btn.title = "Retour en haut";
-    btn.setAttribute("aria-label", "Retour en haut");
-    btn.textContent = "↑";
-    btn.addEventListener("click", () => {
+
+    const button = document.createElement("button");
+    button.id = "backToTop";
+    button.type = "button";
+    button.title = "Retour en haut";
+    button.setAttribute("aria-label", "Retour en haut");
+    button.textContent = "\u2191";
+    button.addEventListener("click", () => {
       window.scrollTo({ top: 0, behavior: "smooth" });
     });
-    document.body.appendChild(btn);
+
+    document.body.appendChild(button);
 
     const onScroll = () => {
-      btn.style.display = window.scrollY > 300 ? "flex" : "none";
+      button.style.display = window.scrollY > 300 ? "flex" : "none";
     };
+
     window.addEventListener("scroll", onScroll, { passive: true });
     onScroll();
   }
 
-  // Smooth scroll for internal anchor links
   function setupSmoothAnchors() {
-    qsa('a[href^="#"]').forEach(a => {
-      a.addEventListener("click", (e) => {
-        const href = a.getAttribute("href");
+    qsa('a[href^="#"]').forEach((anchor) => {
+      anchor.addEventListener("click", (event) => {
+        const href = anchor.getAttribute("href");
         if (!href || href === "#") return;
+
         const target = qs(href);
         if (!target) return;
-        e.preventDefault();
+
+        event.preventDefault();
         target.scrollIntoView({ behavior: "smooth", block: "start" });
       });
     });
   }
 
-  // Reveal on scroll
   function setupReveal() {
     const sections = qsa(".section");
     if (!sections.length) return;
 
-    sections.forEach(s => s.classList.add("reveal"));
+    sections.forEach((section) => section.classList.add("reveal"));
 
     if (!("IntersectionObserver" in window)) {
-      sections.forEach(s => s.classList.add("reveal-visible"));
+      sections.forEach((section) => section.classList.add("reveal-visible"));
       return;
     }
 
-    const io = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("reveal-visible");
-          io.unobserve(entry.target);
-        }
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add("reveal-visible");
+        observer.unobserve(entry.target);
       });
     }, { threshold: 0.12 });
 
-    sections.forEach(s => io.observe(s));
+    sections.forEach((section) => observer.observe(section));
   }
 
-  // Copy to clipboard helper
   async function copyText(text) {
     try {
       if (navigator.clipboard && window.isSecureContext) {
         await navigator.clipboard.writeText(text);
         return true;
       }
-      // fallback
-      const ta = document.createElement("textarea");
-      ta.value = text;
-      ta.style.position = "fixed";
-      ta.style.left = "-9999px";
-      ta.style.top = "0";
-      document.body.appendChild(ta);
-      ta.focus();
-      ta.select();
+
+      const textarea = document.createElement("textarea");
+      textarea.value = text;
+      textarea.style.position = "fixed";
+      textarea.style.left = "-9999px";
+      textarea.style.top = "0";
+      document.body.appendChild(textarea);
+      textarea.focus();
+      textarea.select();
+
       const ok = document.execCommand("copy");
-      ta.remove();
+      textarea.remove();
       return ok;
     } catch {
       return false;
@@ -108,33 +120,31 @@
   }
 
   function setupCopyButtons() {
-    qsa("[data-copy]").forEach(btn => {
-      btn.addEventListener("click", async () => {
-        const value = btn.getAttribute("data-copy") || "";
+    qsa("[data-copy]").forEach((button) => {
+      button.addEventListener("click", async () => {
+        const value = button.getAttribute("data-copy") || "";
         const ok = await copyText(value);
-        toast(ok ? "Copié " : "Impossible de copier");
+        toast(ok ? "Copie effectuee" : "Impossible de copier");
       });
     });
   }
 
-  // Lightbox for portfolio images
   function setupLightbox() {
-    const imgs = qsa("img.js-lightbox, img.image-portfolio");
-    if (!imgs.length) return;
+    const images = qsa("img.js-lightbox, img.image-portfolio");
+    if (!images.length) return;
 
-    // build overlay once
     let overlay = qs(".lightbox");
     if (!overlay) {
       overlay = document.createElement("div");
       overlay.className = "lightbox";
       overlay.innerHTML = `
-        <div class="lightbox-card" role="dialog" aria-modal="true" aria-label="Aperçu image">
+        <div class="lightbox-card" role="dialog" aria-modal="true" aria-label="Apercu image">
           <img class="lightbox-img" alt="">
           <div class="lightbox-bar">
             <div class="lightbox-caption"></div>
             <div class="lightbox-actions">
-              <button type="button" class="lightbox-btn" data-act="prev">◀</button>
-              <button type="button" class="lightbox-btn" data-act="next">▶</button>
+              <button type="button" class="lightbox-btn" data-act="prev">&#9664;</button>
+              <button type="button" class="lightbox-btn" data-act="next">&#9654;</button>
               <button type="button" class="lightbox-btn" data-act="close">Fermer</button>
             </div>
           </div>
@@ -143,54 +153,62 @@
       document.body.appendChild(overlay);
     }
 
-    const imgEl = qs(".lightbox-img", overlay);
-    const capEl = qs(".lightbox-caption", overlay);
+    const imageEl = qs(".lightbox-img", overlay);
+    const captionEl = qs(".lightbox-caption", overlay);
 
     let current = 0;
-    const list = imgs.map((img) => ({
-      src: img.getAttribute("src"),
-      caption: img.getAttribute("data-caption") || img.getAttribute("alt") || ""
+    const gallery = images.map((image) => ({
+      src: image.getAttribute("src"),
+      caption: image.getAttribute("data-caption") || image.getAttribute("alt") || ""
     }));
 
     function openAt(index) {
-      current = (index + list.length) % list.length;
-      imgEl.src = list[current].src;
-      imgEl.alt = list[current].caption || "Aperçu";
-      capEl.textContent = list[current].caption;
+      current = (index + gallery.length) % gallery.length;
+      imageEl.src = gallery[current].src;
+      imageEl.alt = gallery[current].caption || "Apercu";
+      captionEl.textContent = gallery[current].caption;
       overlay.classList.add("open");
       document.body.style.overflow = "hidden";
     }
+
     function close() {
       overlay.classList.remove("open");
       document.body.style.overflow = "";
     }
-    function next() { openAt(current + 1); }
-    function prev() { openAt(current - 1); }
 
-    imgs.forEach((img, idx) => {
-      img.style.cursor = "zoom-in";
-      img.addEventListener("click", () => openAt(idx));
+    function next() {
+      openAt(current + 1);
+    }
+
+    function prev() {
+      openAt(current - 1);
+    }
+
+    images.forEach((image, index) => {
+      image.style.cursor = "zoom-in";
+      image.addEventListener("click", () => openAt(index));
     });
 
-    overlay.addEventListener("click", (e) => {
-      // click outside the card closes
-      if (e.target === overlay) close();
+    overlay.addEventListener("click", (event) => {
+      if (event.target === overlay) close();
     });
 
-    overlay.addEventListener("click", (e) => {
-      const btn = e.target.closest("button[data-act]");
-      if (!btn) return;
-      const act = btn.getAttribute("data-act");
-      if (act === "close") close();
-      if (act === "next") next();
-      if (act === "prev") prev();
+    overlay.addEventListener("click", (event) => {
+      const button = event.target.closest("button[data-act]");
+      if (!button) return;
+
+      const action = button.getAttribute("data-act");
+      if (action === "close") close();
+      if (action === "next") next();
+      if (action === "prev") prev();
     });
 
-    window.addEventListener("keydown", (e) => {
+    window.addEventListener("keydown", (event) => {
       if (!overlay.classList.contains("open")) return;
-      if (e.key === "Escape") close();
-      if (e.key === "ArrowRight") next();
-      if (e.key === "ArrowLeft") prev();
+
+      if (event.key === "Escape") close();
+      if (event.key === "ArrowRight") next();
+      if (event.key === "ArrowLeft") prev();
     });
   }
 

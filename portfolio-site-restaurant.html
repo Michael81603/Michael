@@ -1,52 +1,96 @@
 <!DOCTYPE html>
-
-<html lang="en">
+<html lang="fr">
 <head>
-<meta charset="utf-8"/>
-<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Site web de restaurant</title>
-<link href="styles.css" rel="stylesheet"/>
-<script defer="True" src="app.js"></script></head>
+    <meta charset="utf-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Etude de cas | Site de commande pour restaurant</title>
+    <link href="styles.css" rel="stylesheet">
+    <script defer src="app.js"></script>
+</head>
 <body>
-<!--HEADER-->
-<div class="porfofio-header" style="position: relative;">
-<div class="text-ligne" style="margin-left: 16px; margin-top: 20px;">
-<p class="text-ligne-portfolio-titre">RAKOTOMALALA Fenotiana Michael</p>
-</div>
-<a class="contact-button contact-button-portolio" href="mailto:fenotianamichael81@gmail.com">ME CONTACTER</a>
-</div>
-<!--SECTION GRIS TITRE-->
-<div class="section section-gris1" style="padding-top: 20px;">
-<a class="portfolio-back" href="index.html">Retour</a>
-<div class="ligne-separateur" style="margin-top: -12px;"></div>
-<h1 class="portfolio">Portfolio</h1>
-<h2 class="portfolio">Site web pour un restaurant</h2>
-</div>
-<!--SECTION CONTENU-->
-<div class="section">
-<div class="text-ligne">
-<p>j'ai réalisé ce projet web pour un client travalliant dans le domaine de la restauration.
-                <br/><br/>
-                L'objectif ? Permettre à ce restaurant de gagner en visibilité et de proposer son menu de pizzas aux utilisateurs.De plus, chaque visiteur peuvent passer leur commande en ligne.
-                <br/><br/>
-                Mon client, étant novice dans les nouvelles technologie, à la possibilité de modifier facilement son menu en ligne et gérer les commandes grace à une interface d'administration sur-mesure que j'ai realiser
-                <br/>
-                Le tableau de bord administrateur permet de gérer les catégorie, produits et commandes en temps réel.
-                <br/><br/>
-<u>Technologies utilisées</u> : <b> HTML, CSS, Django, PYTHON </b></p>
-<div style="text-align: center; margin-top: 45px;">
-<p><img alt="" class="image-portfolio js-lightbox" data-caption="Accueil du site" src="acceuil.png"/></p>
-<p><img alt="" class="image-portfolio js-lightbox" data-caption="Menu pizzas" src="menupizza.PNG"/></p>
-<p><img alt="" class="image-portfolio js-lightbox" data-caption="Validation de commande" src="Validation.PNG"/></p>
-<p><img alt="" class="image-portfolio js-lightbox" data-caption="Administration (Django)" src="admin.PNG"/></p>
-<p style="margin-top: 8px;"><a href="https://github.com/Michael81603/Pizzamama" target="_blank">Voir le code sur github</a></p>
-</div>
-</div>
-</div>
-<!--FRAME-->
-<div class="section" id="contact">
-<iframe scrolling="no" src="contact-frame.html"></iframe>
-</div>
+    <div class="porfofio-header">
+        <div class="portfolio-header-inner">
+            <p class="text-ligne-portfolio-titre">RAKOTOMALALA Fenotiana Michael</p>
+            <a class="contact-button contact-button-portolio" href="mailto:fenotianamichael81@gmail.com">ME CONTACTER</a>
+        </div>
+    </div>
+
+    <section class="section section-gris1 portfolio-hero">
+        <div class="portfolio-hero-inner">
+            <a class="portfolio-back" href="index.html">Retour au portfolio</a>
+            <div class="ligne-separateur"></div>
+            <h1 class="portfolio">Etude de cas</h1>
+            <h2 class="portfolio">Site de commande pour restaurant</h2>
+            <p class="portfolio-lead">
+                Un projet pense pour rendre un restaurant plus visible, permettre la commande en ligne
+                et laisser au client la main sur son menu via une administration simple.
+            </p>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="detail-layout">
+            <div class="detail-block">
+                <p class="case-tag">Contexte</p>
+                <h3>Mettre le menu en ligne et simplifier la gestion quotidienne</h3>
+                <p>
+                    Ce projet a ete realise pour un client dans la restauration. Le besoin etait double :
+                    gagner en visibilite sur le web et proposer un systeme de commande accessible aux visiteurs.
+                    Le client etant novice sur les outils numeriques, l'administration devait rester directe et facile a prendre en main.
+                </p>
+            </div>
+
+            <div class="detail-grid">
+                <article class="detail-card">
+                    <h3>Defi</h3>
+                    <p>Construire une experience simple pour les clients tout en donnant au restaurateur une autonomie reelle sur le contenu.</p>
+                </article>
+                <article class="detail-card">
+                    <h3>Solution</h3>
+                    <p>Un site web avec presentation du menu, parcours de commande et interface d'administration sur mesure sous Django.</p>
+                </article>
+                <article class="detail-card">
+                    <h3>Resultat</h3>
+                    <p>Le restaurant peut modifier ses categories, ses produits et gerer les commandes depuis un tableau de bord dedie.</p>
+                </article>
+                <article class="detail-card">
+                    <h3>Technologies</h3>
+                    <p>HTML, CSS, Django et Python pour relier le front, les donnees et l'administration.</p>
+                </article>
+            </div>
+
+            <div class="detail-block">
+                <h3>Ce que j'ai realise</h3>
+                <ul class="feature-list">
+                    <li>Une page d'accueil claire pour presenter le restaurant et son offre.</li>
+                    <li>Un affichage du menu avec categories et produits mis en avant.</li>
+                    <li>Un parcours de commande en ligne plus direct pour les visiteurs.</li>
+                    <li>Une interface d'administration pour gerer categories, produits et commandes en temps reel.</li>
+                </ul>
+            </div>
+
+            <div class="detail-block">
+                <h3>Captures du projet</h3>
+                <p>
+                    Les ecrans ci-dessous montrent la partie visible par les clients ainsi que l'interface
+                    d'administration livree pour le pilotage du menu.
+                </p>
+                <div class="screenshot-grid">
+                    <img alt="Accueil du site restaurant" class="image-portfolio js-lightbox" data-caption="Accueil du site" src="acceuil.png">
+                    <img alt="Menu pizzas du restaurant" class="image-portfolio js-lightbox" data-caption="Menu pizzas" src="menupizza.PNG">
+                    <img alt="Validation de commande" class="image-portfolio js-lightbox" data-caption="Validation de commande" src="Validation.PNG">
+                    <img alt="Interface d'administration Django" class="image-portfolio js-lightbox" data-caption="Administration Django" src="admin.PNG">
+                </div>
+                <p class="project-link-row">
+                    <a class="case-link primary" href="https://github.com/Michael81603/Pizzamama" rel="noreferrer" target="_blank">Voir le code sur GitHub</a>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="contact">
+        <iframe scrolling="no" src="contact-frame.html" title="Contact portfolio"></iframe>
+    </section>
 </body>
 </html>
