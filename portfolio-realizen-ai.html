@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Etude de cas | RealiZen-AI, assistant web de generation d'idees</title>
+    <link href="styles.css" rel="stylesheet">
+    <script defer src="app.js"></script>
+</head>
+<body>
+    <div class="porfofio-header">
+        <div class="portfolio-header-inner">
+            <p class="text-ligne-portfolio-titre">RAKOTOMALALA Fenotiana Michael</p>
+            <a class="contact-button contact-button-portolio" href="mailto:fenotianamichael81@gmail.com">ME CONTACTER</a>
+        </div>
+    </div>
+
+    <section class="section section-gris1 portfolio-hero">
+        <div class="portfolio-hero-inner">
+            <a class="portfolio-back" href="index.html">Retour au portfolio</a>
+            <div class="ligne-separateur"></div>
+            <h1 class="portfolio">Etude de cas</h1>
+            <h2 class="portfolio">RealiZen-AI, assistant web de generation d'idees</h2>
+            <p class="portfolio-lead">
+                Un MVP full-stack pense comme un vrai produit : authentification, conversation IA en streaming,
+                historique relancable, IA locale via Ollama et export du contenu genere en plusieurs formats.
+            </p>
+            <div class="stack-chip-list stack-chip-list-centered">
+                <span class="stack-chip">React / Vite</span>
+                <span class="stack-chip">Django REST</span>
+                <span class="stack-chip">MySQL</span>
+                <span class="stack-chip">JWT</span>
+                <span class="stack-chip">Streaming SSE</span>
+                <span class="stack-chip">Ollama local</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="detail-layout">
+            <div class="detail-block">
+                <figure class="screen-shot screen-shot-hero">
+                    <img alt="Vue de synthese du produit RealiZen-AI" class="image-portfolio" decoding="async" loading="lazy" src="realizen-cover.svg">
+                    <figcaption>
+                        <strong>Vue de synthese du produit</strong>
+                        RealiZen-AI assemble plusieurs briques utiles dans un meme flux : auth, question, reponse en direct,
+                        conversation sauvegardee, historique et export.
+                    </figcaption>
+                </figure>
+            </div>
+
+            <div class="metric-grid">
+                <article class="metric-card">
+                    <span class="metric-value">3</span>
+                    <span class="metric-label">formats d'export deja prevus</span>
+                </article>
+                <article class="metric-card">
+                    <span class="metric-value">SSE</span>
+                    <span class="metric-label">reponse affichee en streaming</span>
+                </article>
+                <article class="metric-card">
+                    <span class="metric-value">JWT</span>
+                    <span class="metric-label">session securisee cote API</span>
+                </article>
+                <article class="metric-card">
+                    <span class="metric-value">Local</span>
+                    <span class="metric-label">modele IA via Ollama en local</span>
+                </article>
+            </div>
+
+            <div class="detail-block">
+                <p class="case-tag">Contexte</p>
+                <h3>Transformer une logique IA en experience produit exploitable</h3>
+                <p>
+                    RealiZen-AI a ete developpe comme un MVP full-stack dans un contexte de hackathon, avec une logique simple :
+                    montrer qu'un assistant IA ne doit pas rester un simple prompt. Le projet cherche au contraire a rendre
+                    l'usage concret pour un utilisateur final, avec un vrai parcours web, une persistance conversationnelle,
+                    une structure de sortie exploitable et des exports qui prolongent la valeur au-dela de la reponse brute.
+                </p>
+            </div>
+
+            <div class="detail-grid">
+                <article class="detail-card">
+                    <h3>Defi</h3>
+                    <p>Faire passer une IA locale du stade de prototype technique au stade d'outil web credible, lisible et reutilisable.</p>
+                </article>
+                <article class="detail-card">
+                    <h3>Solution</h3>
+                    <p>Un front React/Vite pour l'experience utilisateur, un backend Django REST pour la logique metier, et Ollama pour la generation IA en local.</p>
+                </article>
+                <article class="detail-card">
+                    <h3>Resultat</h3>
+                    <p>L'utilisateur peut se connecter, poser une question, suivre la reponse en direct, reprendre la conversation plus tard et exporter ce qui a ete genere.</p>
+                </article>
+                <article class="detail-card">
+                    <h3>Technologies</h3>
+                    <p>React, Vite, Tailwind, shadcn/ui, Django, Django REST Framework, MySQL, JWT, SSE, Ollama et client LLM local.</p>
+                </article>
+            </div>
+
+            <div class="detail-block">
+                <h3>Architecture du produit</h3>
+                <p>
+                    Ce projet est interessant pour un portfolio parce qu'il relie clairement interface, logique metier et couche IA,
+                    sans s'arreter a une simple demo de generation. Chaque brique repond a une fonction concrete dans le parcours.
+                </p>
+                <div class="detail-grid">
+                    <article class="detail-card">
+                        <h3>Front React oriente usage</h3>
+                        <p>Pages de connexion, inscription, dashboard conversationnel et historique, avec reprise de conversation, boutons d'action et feedback utilisateur direct.</p>
+                    </article>
+                    <article class="detail-card">
+                        <h3>API Django comme noyau</h3>
+                        <p>Authentification JWT, endpoints d'idees, conversations, exports et health checks pour garder une application proprement decoupee.</p>
+                    </article>
+                    <article class="detail-card">
+                        <h3>Couche IA locale</h3>
+                        <p>Le backend dialogue avec Ollama en local, construit les prompts et gere les cas ou la sortie JSON du modele est partielle ou imparfaite.</p>
+                    </article>
+                    <article class="detail-card">
+                        <h3>Persistance utile</h3>
+                        <p>Les entites Idea, Conversation et ConversationMessage permettent de relancer un echange, de garder un historique et de rattacher une idee a chaque reponse.</p>
+                    </article>
+                </div>
+                <div class="detail-note">
+                    Point technique fort : la reponse est diffusee en streaming SSE, puis normalisee pour produire un contenu structure
+                    avec suggestions, variantes, plan simple et recommandations. Cela reduit la sensation d'attente et rend la sortie plus exploitable.
+                </div>
+            </div>
+
+            <div class="detail-block">
+                <p class="section-kicker">Parcours</p>
+                <h3>Un flux utilisateur pense comme un vrai produit</h3>
+                <div class="workflow-grid">
+                    <article class="workflow-step">
+                        <span class="workflow-number">01</span>
+                        <h4>Connexion</h4>
+                        <p>Inscription, login, refresh token et recuperation du profil utilisateur.</p>
+                    </article>
+                    <article class="workflow-step">
+                        <span class="workflow-number">02</span>
+                        <h4>Question</h4>
+                        <p>L'utilisateur saisit sa demande, choisit un domaine ou laisse l'application le detecter.</p>
+                    </article>
+                    <article class="workflow-step">
+                        <span class="workflow-number">03</span>
+                        <h4>Streaming</h4>
+                        <p>La reponse arrive morceau par morceau dans le dashboard, avec relances rapides possibles.</p>
+                    </article>
+                    <article class="workflow-step">
+                        <span class="workflow-number">04</span>
+                        <h4>Historique</h4>
+                        <p>Les idees sont sauvegardees, filtrables, consultables et relancables dans la bonne conversation.</p>
+                    </article>
+                    <article class="workflow-step">
+                        <span class="workflow-number">05</span>
+                        <h4>Export</h4>
+                        <p>Le contenu peut etre exporte en texte, PDF ou image pour sortir du simple usage dans le navigateur.</p>
+                    </article>
+                </div>
+            </div>
+
+            <div class="detail-block">
+                <p class="section-kicker">Interface</p>
+                <h3>Les ecrans qui donnent de la credibilite au MVP</h3>
+                <p>
+                    Meme sans deployer un produit complet en production, le projet montre deja les ecrans clefs
+                    qu'un utilisateur attend d'une application IA serieuse : acces securise, espace de travail,
+                    historique, reprise de conversation et sortie reutilisable.
+                </p>
+                <div class="showcase-grid">
+                    <article class="mock-window">
+                        <div class="mock-window-bar">
+                            <span class="mock-dot"></span>
+                            <span class="mock-dot"></span>
+                            <span class="mock-dot"></span>
+                        </div>
+                        <div class="mock-window-body">
+                            <p class="mock-eyebrow">Auth</p>
+                            <h4 class="mock-title">Connexion et inscription</h4>
+                            <p class="mock-copy">Un point d'entree clair pour ouvrir la session utilisateur et securiser l'acces a l'espace personnel.</p>
+                            <ul class="mock-list">
+                                <li>Login et register relies a l'API</li>
+                                <li>Session geree par JWT + refresh token</li>
+                                <li>Redirection automatique selon l'etat de session</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <article class="mock-window">
+                        <div class="mock-window-bar">
+                            <span class="mock-dot"></span>
+                            <span class="mock-dot"></span>
+                            <span class="mock-dot"></span>
+                        </div>
+                        <div class="mock-window-body">
+                            <p class="mock-eyebrow">Dashboard</p>
+                            <h4 class="mock-title">Conversation guidee</h4>
+                            <p class="mock-copy">Le coeur du produit : une question, une reponse visible en direct, puis des relances pour approfondir ou transformer en plan.</p>
+                            <ul class="mock-list">
+                                <li>Streaming de reponse en direct</li>
+                                <li>Suggestion de relances pre-remplies</li>
+                                <li>Copie et export du contenu genere</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <article class="mock-window">
+                        <div class="mock-window-bar">
+                            <span class="mock-dot"></span>
+                            <span class="mock-dot"></span>
+                            <span class="mock-dot"></span>
+                        </div>
+                        <div class="mock-window-body">
+                            <p class="mock-eyebrow">Historique</p>
+                            <h4 class="mock-title">Idees sauvegardees et reprises</h4>
+                            <p class="mock-copy">Le projet ne jette pas la reponse apres affichage : il garde la trace, permet la recherche et remet l'utilisateur dans le bon contexte.</p>
+                            <ul class="mock-list">
+                                <li>Liste des idees generees</li>
+                                <li>Recherche par mots-clefs ou domaine</li>
+                                <li>Reprise de la conversation associee</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <article class="mock-window">
+                        <div class="mock-window-bar">
+                            <span class="mock-dot"></span>
+                            <span class="mock-dot"></span>
+                            <span class="mock-dot"></span>
+                        </div>
+                        <div class="mock-window-body">
+                            <p class="mock-eyebrow">Exports</p>
+                            <h4 class="mock-title">Sortie exploitable hors app</h4>
+                            <p class="mock-copy">Le backend prepare deja plusieurs portes de sortie utiles pour transformer une idee en document ou en contenu partageable.</p>
+                            <ul class="mock-list">
+                                <li>Export texte d'idee et de conversation</li>
+                                <li>Generation PDF et image cote backend</li>
+                                <li>URLs de partage prevues pour plusieurs plateformes</li>
+                            </ul>
+                        </div>
+                    </article>
+                </div>
+            </div>
+
+            <div class="detail-block">
+                <p class="section-kicker">Captures d'écran</p>
+                <h3>Captures d'écran de l'application RealiZen-AI</h3>
+                <p>
+                    Voici quelques captures d'écran de l'application en fonctionnement, montrant l'interface utilisateur
+                    pour l'authentification, la conversation IA et l'historique des idées.
+                </p>
+                <div class="screenshot-grid">
+                    <figure class="screen-shot">
+                        <img alt="Page de connexion RealiZen-AI" class="image-portfolio js-lightbox" data-caption="Connexion" decoding="async" loading="lazy" src="capture_realizen_ai/sing.PNG">
+                        <figcaption>
+                            <strong>Page de connexion</strong>
+                            Interface d'authentification pour accéder à l'espace personnel de l'utilisateur.
+                        </figcaption>
+                    </figure>
+                    <figure class="screen-shot">
+                        <img alt="Dashboard de conversation RealiZen-AI" class="image-portfolio js-lightbox" data-caption="Conversation IA" decoding="async" loading="lazy" src="capture_realizen_ai/chat.PNG">
+                        <figcaption>
+                            <strong>Conversation avec l'IA</strong>
+                            Interface principale où l'utilisateur pose sa question et reçoit la réponse en streaming.
+                        </figcaption>
+                    </figure>
+                    <figure class="screen-shot">
+                        <img alt="Historique des idées RealiZen-AI" class="image-portfolio js-lightbox" data-caption="Historique" decoding="async" loading="lazy" src="capture_realizen_ai/historique.PNG">
+                        <figcaption>
+                            <strong>Historique des idées</strong>
+                            Liste des idées générées avec possibilité de reprise de conversation.
+                        </figcaption>
+                    </figure>
+                </div>
+            </div>
+
+            <div class="detail-block">
+                <p class="section-kicker">Backend</p>
+                <h3>Routes et services qui structurent le produit</h3>
+                <p>
+                    Le backend ne sert pas uniquement a faire transiter une requete vers un modele. Il porte l'etat du produit,
+                    la continuite des conversations, la securite utilisateur et la generation d'exports.
+                </p>
+                <div class="api-endpoint-grid">
+                    <article class="api-endpoint">
+                        <code>POST /api/auth/login/</code>
+                        <p>Connexion utilisateur et delivrance des tokens JWT pour ouvrir l'espace personnel.</p>
+                    </article>
+                    <article class="api-endpoint">
+                        <code>POST /api/ideas/conversations/stream/</code>
+                        <p>Point central du produit : envoi de la question, streaming SSE de la reponse puis sauvegarde de l'idee et du message assistant.</p>
+                    </article>
+                    <article class="api-endpoint">
+                        <code>GET /api/ideas/conversations/latest/</code>
+                        <p>Reprise rapide de la derniere conversation pour conserver la continuite d'usage.</p>
+                    </article>
+                    <article class="api-endpoint">
+                        <code>GET /api/ideas/</code>
+                        <p>Historique des idees de l'utilisateur avec acces aux contenus generes et a leur contexte.</p>
+                    </article>
+                    <article class="api-endpoint">
+                        <code>GET /api/exports/ideas/{id}/text/</code>
+                        <p>Export texte deja branche dans le frontend pour sortir une idee hors application.</p>
+                    </article>
+                    <article class="api-endpoint">
+                        <code>GET /health/ai/</code>
+                        <p>Verification de la disponibilite du moteur IA local et des modeles charges dans Ollama.</p>
+                    </article>
+                </div>
+            </div>
+
+            <div class="detail-block">
+                <h3>Ce que ce projet montre dans mon portfolio</h3>
+                <div class="proof-grid">
+                    <article class="proof-card">
+                        <h4>Vision produit</h4>
+                        <p>Je ne me limite pas a brancher une API. Je construis un parcours complet avec usage, continuite et sortie exploitable.</p>
+                    </article>
+                    <article class="proof-card">
+                        <h4>Capacite full-stack</h4>
+                        <p>Le projet relie interface, backend, data model, streaming, auth et couche IA dans un ensemble coherent.</p>
+                    </article>
+                    <article class="proof-card">
+                        <h4>Rigueur technique</h4>
+                        <p>La presence d'un parser de normalisation, de health checks et d'une persistance conversationnelle montre une approche plus solide qu'une simple demo.</p>
+                    </article>
+                </div>
+            </div>
+
+            <div class="detail-block">
+                <h3>Suite logique du produit</h3>
+                <ul class="feature-list">
+                    <li>Ajouter une page marketing publique pour presenter l'outil avant connexion.</li>
+                    <li>Brancher cote frontend les exports PDF, image et les URLs de partage deja exposes par le backend.</li>
+                    <li>Renforcer la couverture de tests sur les modules auth et exports pour fiabiliser le passage a une version plus exploitable.</li>
+                    <li>Preparer un deploiement cloud avec supervision du moteur IA et configuration multi-environnements.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="contact">
+        <div class="frame contact-frame-layout">
+            <p class="frame-title">Parlons de votre projet</p>
+            <div class="contact-frame-body">
+                <img alt="Photo de profil" class="contact-frame-photo" decoding="async" loading="lazy" src="profile.jpg">
+                <div class="contact-frame-copy">
+                    <p>
+                        Besoin d'un site web, d'une interface de gestion ou d'une application simple a utiliser ?
+                        Je peux vous aider a cadrer le besoin puis a realiser une solution concrete.
+                    </p>
+                    <p>
+                        <a href="mailto:fenotianamichael81@gmail.com">Contactez-moi par email</a>
+                        ou directement par telephone au
+                        <a href="tel:+261377817771">+261 37 78 17 771</a>.
+                    </p>
+                    <div class="contact-actions">
+                        <button class="btn-copy" data-copy="fenotianamichael81@gmail.com" type="button">Copier email</button>
+                        <button class="btn-copy" data-copy="+261377817771" type="button">Copier telephone</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
