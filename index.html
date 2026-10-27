@@ -4,59 +4,77 @@
     <meta charset="utf-8">
     <meta content="IE=edge" http-equiv="X-UA-Compatible">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <title>Fenotiana Michael | Developpeur web et mobile</title>
-    <link href="styles.css" rel="stylesheet">
-    <script defer src="app.js"></script>
+    <title>Fenotiana Michael | Développeur web et mobile</title>
+    <link href="assets/icons/favicon-64.png" rel="icon" sizes="64x64" type="image/png">
+    <link href="assets/css/base.css" rel="stylesheet">
+    <link href="assets/css/components.css" rel="stylesheet">
+    <link href="assets/css/pages.css" rel="stylesheet">
+    <script type="module" src="assets/js/main.js"></script>
 </head>
 <body>
+    <a class="skip-link" href="#contenu">Aller au contenu</a>
     <header class="cover" id="top">
         <div class="cover-contact">
             <p><a href="mailto:fenotianamichael81@gmail.com">fenotianamichael81@gmail.com</a></p>
             <p><a href="tel:+261377817771">+261 37 78 17 771</a></p>
         </div>
 
-        <img alt="Portrait de Fenotiana Michael" class="profile-cover" decoding="async" src="profile.jpg">
+        <img alt="Portrait de Fenotiana Michael" class="profile-cover" decoding="async" height="806" src="assets/images/profile/portrait.webp" width="775">
         <p class="cover-kicker">Portfolio freelance</p>
-        <h1>RAKOTOMALALA Fenotiana Michael</h1>
-        <p class="cover-role">Developpeur web et mobile</p>
+        <p class="cover-name">RAKOTOMALALA Fenotiana Michael</p>
+        <h1>Développeur full-stack web et mobile</h1>
         <p class="cover-intro">
-            Je cree des sites web, interfaces de gestion et applications utiles, avec un objectif simple :
-            livrer des outils clairs, rapides et faciles a faire evoluer.
+            Je conçois des applications web et mobiles, des interfaces de gestion et des outils métier
+            clairs, rapides et faciles à faire évoluer.
         </p>
+        <!-- TODO: renseigner la localisation (VILLE, PAYS), puis l'afficher ici. -->
+        <!-- TODO: renseigner la disponibilité, puis l'afficher ici. -->
+        <div class="cover-stack" aria-label="Technologies principales">
+            <span>React</span>
+            <span>Next.js</span>
+            <span>Django REST</span>
+            <span>FastAPI</span>
+            <span>Flutter</span>
+            <span>PostgreSQL</span>
+            <span>JavaScript</span>
+        </div>
         <div class="cover-actions">
             <a class="contact-button" href="#portfolio">VOIR MES PROJETS</a>
             <a class="contact-button contact-button-secondary" href="mailto:fenotianamichael81@gmail.com">ME CONTACTER</a>
         </div>
+        <!-- TODO: ajouter ici un lien accessible vers LinkedIn lorsque URL_LINKEDIN sera renseignée. -->
+        <!-- TODO: ajouter ici un lien de téléchargement lorsque CHEMIN_DU_CV sera renseigné. -->
     </header>
 
     <nav class="top-nav">
         <div class="top-nav-inner">
             <a class="top-nav-link" href="#top">Accueil</a>
-            <a class="top-nav-link" href="#about">A propos</a>
-            <a class="top-nav-link" href="#portfolio">Etudes de cas</a>
+            <a class="top-nav-link" href="#about">À propos</a>
+            <a class="top-nav-link" href="#portfolio">Études de cas</a>
             <a class="top-nav-link" href="#contact">Contact</a>
         </div>
     </nav>
 
+    <main id="contenu" tabindex="-1">
     <section class="section section-gris1 section-intro">
         <div class="section-intro-inner">
             <div class="ligne-separateur"></div>
             <p>
-                Je transforme un besoin metier en produit web ou mobile concret, avec une attention particuliere
-                a la clarte de l'interface, a la maintenance et a l'autonomie du client.
+                Je transforme un besoin métier en produit web ou mobile concret, avec une attention particulière
+                à la clarté de l'interface, à la maintenance et à l'autonomie du client.
             </p>
             <div class="highlight-strip">
                 <article class="highlight-card">
                     <strong>Sites web</strong>
-                    <span>Pages de presentation, navigation claire et call-to-action utiles.</span>
+                    <span>Pages de présentation, navigation claire et appels à l'action utiles.</span>
                 </article>
                 <article class="highlight-card">
                     <strong>Interfaces de gestion</strong>
-                    <span>Outils simples a utiliser pour administrer un contenu ou suivre une activite.</span>
+                    <span>Outils simples à utiliser pour administrer un contenu ou suivre une activité.</span>
                 </article>
                 <article class="highlight-card">
                     <strong>Applications utiles</strong>
-                    <span>Fonctionnalites concretes, donnees lisibles et experience fluide.</span>
+                    <span>Fonctionnalités concrètes, données lisibles et expérience fluide.</span>
                 </article>
             </div>
         </div>
@@ -65,19 +83,19 @@
     <section class="section" id="about">
         <div class="about-layout">
             <div class="about-media">
-                <img alt="Ordinateur et environnement de travail" class="about-image" src="ordinateur.jpeg">
+                <img alt="" class="about-image" decoding="async" height="432" loading="lazy" src="assets/images/profile/workspace.webp" width="576">
             </div>
             <div class="about-content">
-                <p class="section-kicker">A propos</p>
-                <h2>Un profil oriente execution</h2>
+                <p class="section-kicker">À propos</p>
+                <h2>Un profil orienté vers la réalisation</h2>
                 <p>
-                    Je me specialise dans le developpement web et mobile, avec des competences en AngularJS,
-                    PHP, MySQL, Django, Java et Kotlin. J'aime construire des projets concrets : site de commande,
+                    Je me spécialise dans le développement web et mobile, avec des compétences en AngularJS,
+                    PHP, MySQL, Django, Java et Kotlin. J'aime construire des projets concrets : sites de commande,
                     application de gestion, interface d'administration et outils utiles au quotidien.
                 </p>
                 <p>
-                    Je m'interesse aussi au freelance, avec une approche simple : comprendre le besoin, cadrer la
-                    solution, puis livrer un resultat que le client peut utiliser sans friction.
+                    Je m'intéresse également au travail indépendant, avec une approche simple : comprendre le besoin, cadrer la
+                    solution, puis livrer un résultat que le client peut utiliser facilement.
                 </p>
                 <div class="about-points">
                     <article class="about-point">
@@ -85,15 +103,15 @@
                         <p>Site vitrine, back-office, application de gestion, prototype web ou mobile.</p>
                     </article>
                     <article class="about-point">
-                        <h3>Ma priorite</h3>
-                        <p>Une interface lisible, des fonctionnalites utiles et une base facile a faire evoluer.</p>
+                        <h3>Ma priorité</h3>
+                        <p>Une interface lisible, des fonctionnalités utiles et une base facile à faire évoluer.</p>
                     </article>
                     <article class="about-point">
                         <h3>Ce que montre ce portfolio</h3>
-                        <p>Des projets presentes comme de vraies etudes de cas : contexte, defi, solution et resultat.</p>
+                        <p>Des projets présentés comme de véritables études de cas : contexte, défi, solution et résultat.</p>
                     </article>
                 </div>
-                <a class="inline-link" href="#portfolio">Voir les etudes de cas</a>
+                <a class="inline-link" href="#portfolio">Voir les études de cas</a>
             </div>
         </div>
     </section>
@@ -101,104 +119,104 @@
     <section class="section section-gris2" id="portfolio">
         <div class="section-heading">
             <p class="section-kicker">Portfolio</p>
-            <h2>Etudes de cas</h2>
+            <h2>Études de cas</h2>
             <p>
-                J'organise ici mes projets les plus documentes sous forme d'etudes de cas visuelles. Chaque page
-                detaille le contexte, les choix realises, les captures et la valeur livree.
+                Je présente ici mes projets les plus documentés sous forme d'études de cas visuelles. Chaque page
+                détaille le contexte, les choix réalisés, les captures et la valeur apportée.
             </p>
         </div>
 
         <div class="case-grid">
             <article class="case-card case-card-featured">
-                <a class="case-media" href="portfolio-realizen-ai.html">
-                    <img alt="Vue de synthese du projet RealiZen-AI" decoding="async" loading="lazy" src="realizen-cover.svg">
+                <a class="case-media" href="projects/realizen-ai.html">
+                    <img alt="Vue de synthèse du projet RealiZen-AI" decoding="async" height="960" loading="lazy" src="assets/images/projects/realizen-ai/cover.svg" width="1600">
                 </a>
                 <div class="case-content">
-                    <p class="case-tag">Etude de cas 01</p>
-                    <h3>RealiZen-AI, assistant web de generation d'idees</h3>
+                    <p class="case-tag">Étude de cas 01</p>
+                    <h3>RealiZen-AI, assistant web de génération d'idées</h3>
                     <p class="case-summary">
-                        Un MVP full-stack qui transforme une question vague en reponse utile, variantes,
-                        plan d'action et conversation persistante, avec une IA locale et des exports exploitables.
+                        Un MVP full-stack qui transforme une question vague en réponse utile, accompagnée de variantes,
+                        d'un plan d'action et d'une conversation persistante, avec une IA locale et des exports exploitables.
                     </p>
                     <div class="case-points">
-                        <p><strong>Defi :</strong> Passer d'un simple appel IA a une application claire, securisee et reutilisable par un vrai utilisateur.</p>
-                        <p><strong>Solution :</strong> Une interface React/Vite avec authentification JWT, streaming de reponse, historique relancable et backend Django REST connecte a Ollama en local.</p>
-                        <p><strong>Resultat :</strong> L'utilisateur peut se connecter, poser une question, poursuivre la conversation, retrouver ses idees et exporter le contenu genere.</p>
+                        <p><strong>Défi :</strong> Passer d'un simple appel à une IA à une application claire, sécurisée et réutilisable par un utilisateur.</p>
+                        <p><strong>Solution :</strong> Une interface React/Vite avec authentification JWT, réponse en streaming, historique réutilisable et backend Django REST connecté à Ollama en local.</p>
+                        <p><strong>Résultat :</strong> L'utilisateur peut se connecter, poser une question, poursuivre la conversation, retrouver ses idées et exporter le contenu généré.</p>
                     </div>
                     <p class="case-stack">React, Vite, Django REST, MySQL, Ollama, JWT, SSE</p>
                     <div class="case-actions">
-                        <a class="case-link primary" href="portfolio-realizen-ai.html">Voir l'etude de cas</a>
+                        <a class="case-link primary" href="projects/realizen-ai.html">Voir l'étude de cas</a>
                     </div>
                 </div>
             </article>
 
             <article class="case-card">
-                <a class="case-media" href="portfolio-deliverpro.html">
-                    <img alt="Vue dashboard de l'application DeliverPro" decoding="async" loading="lazy" src="deliverpro-captures/dashboard-global.png">
+                <a class="case-media" href="projects/deliverpro.html">
+                    <img alt="Vue du tableau de bord de l'application DeliverPro" decoding="async" height="576" loading="lazy" sizes="(max-width: 900px) calc(100vw - 40px), 510px" src="assets/images/projects/deliverpro/tableau-de-bord-global-card-1024.webp" srcset="assets/images/projects/deliverpro/tableau-de-bord-global-card-640.webp 640w, assets/images/projects/deliverpro/tableau-de-bord-global-card-1024.webp 1024w" width="1024">
                 </a>
                 <div class="case-content">
-                    <p class="case-tag">Etude de cas 02</p>
+                    <p class="case-tag">Étude de cas 02</p>
                     <h3>DeliverPro, plateforme de gestion de livraison</h3>
                     <p class="case-summary">
-                        Une solution complete avec back-office desktop, API metier et application Flutter
+                        Une solution complète avec back-office desktop, API métier et application Flutter
                         pour piloter les commandes, les partenaires, les finances et le travail terrain.
                     </p>
                     <div class="case-points">
-                        <p><strong>Defi :</strong> Eviter de gerer l'activite entre plusieurs fichiers, vues et outils disperses.</p>
-                        <p><strong>Solution :</strong> Un back-office React + Electron pour l'administration, une API Django REST securisee par JWT et une application Flutter pour les parcours admin et livreur.</p>
-                        <p><strong>Resultat :</strong> Un meme socle technique pour piloter le back-office, exposer la logique metier et faire avancer les livraisons depuis mobile.</p>
+                        <p><strong>Défi :</strong> Éviter de gérer l'activité avec plusieurs fichiers, vues et outils dispersés.</p>
+                        <p><strong>Solution :</strong> Un back-office React + Electron pour l'administration, une API Django REST sécurisée par JWT et une application Flutter pour les parcours administrateur et livreur.</p>
+                        <p><strong>Résultat :</strong> Un même socle technique pour piloter le back-office, exposer la logique métier et faire progresser les livraisons depuis un appareil mobile.</p>
                     </div>
                     <p class="case-stack">React, Vite, Electron, Django REST, PostgreSQL, Flutter, JWT</p>
                     <div class="case-actions">
-                        <a class="case-link primary" href="portfolio-deliverpro.html">Voir l'etude de cas</a>
+                        <a class="case-link primary" href="projects/deliverpro.html">Voir l'étude de cas</a>
                     </div>
                 </div>
             </article>
 
             <article class="case-card">
-                <a class="case-media" href="portfolio-site-restaurant.html">
-                    <img alt="Capture du projet Pizzamama" decoding="async" loading="lazy" src="capture pizzamama/Menu 1.PNG">
+                <a class="case-media" href="projects/pizzamama.html">
+                    <img alt="Menu du site de commande Pizzamama" decoding="async" height="555" loading="lazy" sizes="(max-width: 900px) calc(100vw - 40px), 510px" src="assets/images/projects/pizzamama/menu-01-card-1024.webp" srcset="assets/images/projects/pizzamama/menu-01-card-640.webp 640w, assets/images/projects/pizzamama/menu-01-card-1024.webp 1024w" width="1024">
                 </a>
                 <div class="case-content">
-                    <p class="case-tag">Etude de cas 03</p>
+                    <p class="case-tag">Étude de cas 03</p>
                     <h3>Site de commande pour restaurant</h3>
                     <p class="case-summary">
-                        Un site web concu pour rendre un restaurant plus visible, presenter son menu
-                        et recevoir des commandes dans une interface simple a administrer.
+                        Un site web conçu pour rendre un restaurant plus visible, présenter son menu
+                        et recevoir des commandes dans une interface simple à administrer.
                     </p>
                     <div class="case-points">
-                        <p><strong>Defi :</strong> Mettre en ligne le menu et permettre au client de gerer son contenu sans aide technique.</p>
-                        <p><strong>Solution :</strong> Un front clair pour les visiteurs et une administration sur mesure sous Django.</p>
-                        <p><strong>Resultat :</strong> Le restaurant peut mettre a jour ses categories, ses produits et suivre les commandes.</p>
+                        <p><strong>Défi :</strong> Mettre le menu en ligne et permettre au client de gérer son contenu sans aide technique.</p>
+                        <p><strong>Solution :</strong> Un frontend clair pour les visiteurs et une administration sur mesure sous Django.</p>
+                        <p><strong>Résultat :</strong> Le restaurant peut mettre à jour ses catégories et ses produits, puis suivre les commandes.</p>
                     </div>
                     <p class="case-stack">HTML, CSS, Django, Python</p>
                     <div class="case-actions">
-                        <a class="case-link primary" href="portfolio-site-restaurant.html">Voir l'etude de cas</a>
-                        <a class="case-link" href="https://github.com/Michael81603/Pizzamama" rel="noreferrer" target="_blank">Code source</a>
+                        <a class="case-link primary" href="projects/pizzamama.html">Voir l'étude de cas</a>
+                        <a class="case-link" href="https://github.com/Michael81603/Pizzamama" rel="noopener noreferrer" target="_blank">Voir le code sur GitHub — nouvel onglet</a>
                     </div>
                 </div>
             </article>
 
             <article class="case-card">
-                <a class="case-media" href="portfolio-site-gestion-revenu.html">
-                    <img alt="Capture de l'application de gestion des revenus" decoding="async" loading="lazy" src="tout les cature/Capture4.PNG">
+                <a class="case-media" href="projects/gestion-revenus.html">
+                    <img alt="Capture de l'application de gestion des revenus" decoding="async" height="647" loading="lazy" src="assets/images/projects/gestion-revenus/analyse-revenus-depenses.webp" width="1364">
                 </a>
                 <div class="case-content">
-                    <p class="case-tag">Etude de cas 04</p>
-                    <h3>Application de gestion des revenus et depenses</h3>
+                    <p class="case-tag">Étude de cas 04</p>
+                    <h3>Application de gestion des revenus et dépenses</h3>
                     <p class="case-summary">
-                        Une application de suivi budgetaire qui centralise les transactions, automatise le calcul
-                        du solde et rend l'analyse financiere plus lisible.
+                        Une application de suivi budgétaire qui centralise les transactions, automatise le calcul
+                        du solde et rend l'analyse financière plus lisible.
                     </p>
                     <div class="case-points">
-                        <p><strong>Defi :</strong> Rendre le suivi financier simple, clair et exploitable au quotidien.</p>
-                        <p><strong>Solution :</strong> Une interface Streamlit reliee a une API et a des graphiques pour mieux lire les donnees.</p>
-                        <p><strong>Resultat :</strong> Les revenus, depenses et tendances sont visibles dans un seul espace.</p>
+                        <p><strong>Défi :</strong> Rendre le suivi financier simple, clair et exploitable au quotidien.</p>
+                        <p><strong>Solution :</strong> Une interface Streamlit reliée à une API et à des graphiques pour mieux lire les données.</p>
+                        <p><strong>Résultat :</strong> Les revenus, les dépenses et les tendances sont visibles dans un seul espace.</p>
                     </div>
                     <p class="case-stack">Streamlit, Plotly, FastAPI, Python</p>
                     <div class="case-actions">
-                        <a class="case-link primary" href="portfolio-site-gestion-revenu.html">Voir l'etude de cas</a>
-                        <a class="case-link" href="https://github.com/Michael81603/gestion_revenu.git" rel="noreferrer" target="_blank">Code source</a>
+                        <a class="case-link primary" href="projects/gestion-revenus.html">Voir l'étude de cas</a>
+                        <a class="case-link" href="https://github.com/Michael81603/gestion_revenu.git" rel="noopener noreferrer" target="_blank">Voir le code sur GitHub — nouvel onglet</a>
                     </div>
                 </div>
             </article>
@@ -211,30 +229,49 @@
             <h2>Discutons de votre projet</h2>
             <p>
                 Si vous avez besoin d'un site web, d'une application ou d'une interface de gestion,
-                je peux vous aider a cadrer le besoin et a realiser une solution concrete.
+                je peux vous aider à cadrer le besoin et à réaliser une solution concrète.
             </p>
         </div>
         <div class="frame contact-frame-layout">
             <p class="frame-title">Parlons de votre projet</p>
             <div class="contact-frame-body">
-                <img alt="Photo de profil" class="contact-frame-photo" decoding="async" loading="lazy" src="profile.jpg">
+                <img alt="" class="contact-frame-photo" decoding="async" height="806" loading="lazy" src="assets/images/profile/portrait.webp" width="775">
                 <div class="contact-frame-copy">
                     <p>
-                        Besoin d'un site web, d'une interface de gestion ou d'une application simple a utiliser ?
-                        Je peux vous aider a cadrer le besoin puis a realiser une solution concrete.
+                        Besoin d'un site web, d'une interface de gestion ou d'une application simple à utiliser ?
+                        Je peux vous aider à cadrer le besoin, puis à réaliser une solution concrète.
                     </p>
                     <p>
-                        <a href="mailto:fenotianamichael81@gmail.com">Contactez-moi par email</a>
-                        ou directement par telephone au
+                        <a href="mailto:fenotianamichael81@gmail.com">Contactez-moi par e-mail</a>
+                        ou directement par téléphone au
                         <a href="tel:+261377817771">+261 37 78 17 771</a>.
                     </p>
+                    <!-- TODO: ajouter ici une phrase visible lorsque TYPE_DE_MISSIONS_RECHERCHÉES, DISPONIBILITÉ et MODE_DE_TRAVAIL seront renseignés. -->
+                    <div class="contact-primary-actions">
+                        <a class="case-link primary" href="mailto:fenotianamichael81@gmail.com">Envoyer un e-mail</a>
+                        <a class="case-link" href="tel:+261377817771">Appeler le +261 37 78 17 771</a>
+                        <a class="case-link" href="https://github.com/Michael81603" rel="noopener noreferrer" target="_blank">Voir mon profil GitHub — nouvel onglet</a>
+                    </div>
                     <div class="contact-actions">
-                        <button class="btn-copy" data-copy="fenotianamichael81@gmail.com" type="button">Copier email</button>
-                        <button class="btn-copy" data-copy="+261377817771" type="button">Copier telephone</button>
+                        <button class="btn-copy" data-copy="fenotianamichael81@gmail.com" type="button">Copier l'e-mail</button>
+                        <button class="btn-copy" data-copy="+261377817771" type="button">Copier le téléphone</button>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+    </main>
+
+    <footer class="site-footer">
+        <nav class="footer-links" aria-label="Liens professionnels">
+            <a href="mailto:fenotianamichael81@gmail.com">Envoyer un e-mail</a>
+            <a href="tel:+261377817771">Appeler le +261 37 78 17 771</a>
+            <a href="https://github.com/Michael81603" rel="noopener noreferrer" target="_blank">Voir mon profil GitHub — nouvel onglet</a>
+            <a href="#top">Retour en haut</a>
+            <!-- TODO: ajouter « Voir mon profil LinkedIn — nouvel onglet » lorsque URL_LINKEDIN sera renseignée. -->
+            <!-- TODO: ajouter « Télécharger mon CV » lorsque CHEMIN_DU_CV sera renseigné. -->
+            <!-- TODO optionnel: ajouter WhatsApp uniquement après confirmation que le numéro indiqué y est associé. -->
+        </nav>
+    </footer>
 </body>
 </html>

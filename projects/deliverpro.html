@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Étude de cas | DeliverPro, plateforme de gestion de livraison</title>
+    <link href="../assets/icons/favicon-64.png" rel="icon" sizes="64x64" type="image/png">
+    <link href="../assets/css/base.css" rel="stylesheet">
+    <link href="../assets/css/components.css" rel="stylesheet">
+    <link href="../assets/css/pages.css" rel="stylesheet">
+    <script type="module" src="../assets/js/main.js"></script>
+</head>
+<body>
+    <a class="skip-link" href="#contenu">Aller au contenu</a>
+    <header class="porfofio-header" id="top">
+        <div class="portfolio-header-inner">
+            <p class="text-ligne-portfolio-titre">RAKOTOMALALA Fenotiana Michael</p>
+            <a class="contact-button contact-button-portolio" href="mailto:fenotianamichael81@gmail.com">ME CONTACTER</a>
+        </div>
+    </header>
+
+    <main id="contenu" tabindex="-1">
+        <article class="case-study">
+            <header class="section section-gris1 portfolio-hero">
+                <div class="portfolio-hero-inner">
+                    <a class="portfolio-back" href="../index.html#portfolio">Retour au portfolio</a>
+                    <div class="ligne-separateur"></div>
+                    <p class="portfolio-label">Étude de cas</p>
+                    <h1 class="portfolio-title">DeliverPro, plateforme de gestion de livraison</h1>
+                    <p class="portfolio-lead">Une plateforme composée d'un back-office desktop, d'une API métier et d'une application Flutter pour centraliser les commandes, les partenaires et les finances.</p>
+                </div>
+            </header>
+
+            <div class="section">
+                <div class="detail-layout">
+                    <section class="case-section" aria-labelledby="deliverpro-informations">
+                        <h2 id="deliverpro-informations">Informations rapides</h2>
+                        <dl class="case-facts-list">
+                            <div class="case-fact"><dt>Type de projet</dt><dd>Plateforme de gestion de livraison</dd></div>
+                            <div class="case-fact"><dt>Mon rôle</dt><dd>Information à compléter</dd></div>
+                            <div class="case-fact"><dt>Durée</dt><dd>Information à compléter</dd></div>
+                            <div class="case-fact"><dt>Statut</dt><dd>Information à compléter</dd></div>
+                            <div class="case-fact"><dt>Technologies</dt><dd>React, Vite, Electron, Django REST, PostgreSQL, Flutter et JWT</dd></div>
+                        </dl>
+                    </section>
+
+                    <section class="case-section" aria-labelledby="deliverpro-contexte">
+                        <h2 id="deliverpro-contexte">Contexte</h2>
+                        <p>DeliverPro a été conçu pour suivre une activité de livraison depuis une seule interface, sans alterner entre plusieurs tableaux, fichiers ou espaces de travail. L'administrateur dispose d'une vision de l'activité, tandis que l'API métier alimente le back-office et les parcours mobiles administrateur et livreur.</p>
+                    </section>
+
+                    <section class="case-section" aria-labelledby="deliverpro-probleme">
+                        <h2 id="deliverpro-probleme">Problème rencontré</h2>
+                        <p>Centraliser les opérations quotidiennes et les indicateurs financiers, puis partager la même logique métier entre le poste administrateur et l'application mobile.</p>
+                    </section>
+
+                    <section class="case-section" aria-labelledby="deliverpro-role">
+                        <h2 id="deliverpro-role">Mon rôle</h2>
+                        <p class="placeholder-info">Information à compléter</p>
+                    </section>
+
+                    <section class="case-section" aria-labelledby="deliverpro-solution">
+                        <h2 id="deliverpro-solution">Solution</h2>
+                        <p>Un back-office React + Electron pour l'administration, une API Django REST sécurisée par JWT et une application Flutter pour les parcours administrateur et livreur.</p>
+                    </section>
+
+                    <section class="case-section" aria-labelledby="deliverpro-technologies">
+                        <h2 id="deliverpro-technologies">Technologies</h2>
+                        <p>React, Vite, Electron, Django, Django REST Framework, PostgreSQL, Flutter, JWT et création d'un paquet Windows.</p>
+                    </section>
+
+                    <section class="case-section" aria-labelledby="deliverpro-architecture">
+                        <h2 id="deliverpro-architecture">Architecture et fonctionnement</h2>
+                        <p>Le produit repose sur trois briques reliées par une même API.</p>
+                        <div class="detail-grid">
+                            <article class="detail-card"><h3>Back-office desktop administrateur</h3><p>React + Electron pour gérer les commandes, les entreprises, les utilisateurs, les finances et les exports PDF depuis un poste fixe.</p></article>
+                            <article class="detail-card"><h3>API métier Django</h3><p>Authentification JWT, règles de gestion, tableaux de bord, transactions, objectifs, exports et données partagées.</p></article>
+                            <article class="detail-card"><h3>Application Flutter terrain</h3><p>Parcours administrateur et livreur avec connexion sécurisée, suivi des commandes, finances, entreprises et opérations mobiles.</p></article>
+                            <article class="detail-card"><h3>Flux unifié</h3><p>Le desktop et l'application mobile utilisent le même backend pour synchroniser les opérations et éviter les doubles saisies.</p></article>
+                        </div>
+                        <h3>API REST Django</h3>
+                        <p>Le backend porte les droits d'accès, les données PostgreSQL, les calculs financiers, les tableaux de bord, l'historique, l'export PDF et les ressources métier.</p>
+                        <div class="detail-grid">
+                            <article class="detail-card"><h3>Authentification et sécurité</h3><p>Jetons d'accès et de rafraîchissement JWT, déconnexion, profil, changement de mot de passe et permissions administrateur et livreur.</p></article>
+                            <article class="detail-card"><h3>Ressources métier</h3><p>CRUD des utilisateurs, entreprises, commandes, transactions, objectifs et journaux d'audit, avec filtres, pagination et relations.</p></article>
+                            <article class="detail-card"><h3>Services exposés</h3><p>Tableaux de bord, alertes budgétaires, paiements, export PDF, statistiques par entreprise et automatisations métier.</p></article>
+                            <article class="detail-card"><h3>Exploitation et qualité</h3><p>Swagger, tests API sur les cas critiques, configuration de déploiement, CORS et WebSocket en temps réel.</p></article>
+                        </div>
+                        <div class="api-endpoint-grid">
+                            <article class="api-endpoint"><code>/api/auth/login/</code><p>Authentification JWT et ouverture de session.</p></article>
+                            <article class="api-endpoint"><code>/api/dashboard/</code><p>Synthèse administrateur des revenus, dépenses, commandes et indicateurs.</p></article>
+                            <article class="api-endpoint"><code>/api/dashboard/livreur/</code><p>Vue adaptée au rôle du livreur et à ses commandes.</p></article>
+                            <article class="api-endpoint"><code>/api/commandes/</code><p>Gestion des commandes, statuts et cycle de livraison.</p></article>
+                            <article class="api-endpoint"><code>/api/transactions/</code><p>Journal financier, revenus, dépenses et historique.</p></article>
+                            <article class="api-endpoint"><code>/api/export/pdf/</code><p>Rapports filtrés par période, entreprise, livreur et type de contenu.</p></article>
+                        </div>
+                        <div class="detail-note">Le backend sert de source de référence aux deux interfaces afin de garantir la cohérence des données et la fiabilité du suivi.</div>
+                    </section>
+
+                    <section class="case-section" aria-labelledby="deliverpro-fonctionnalites">
+                        <h2 id="deliverpro-fonctionnalites">Fonctionnalités principales</h2>
+                        <ul class="feature-list">
+                            <li>Tableau de bord global avec indicateurs financiers et visualisations.</li><li>Gestion des commandes avec recherche, filtres et suivi par statut.</li><li>Administration des utilisateurs et des rôles.</li><li>Gestion des entreprises partenaires et de leurs performances.</li><li>Suivi des revenus, dépenses, bénéfice net et transactions.</li><li>Objectifs, budget et seuils mensuels.</li><li>Export PDF filtré.</li><li>Authentification JWT partagée.</li><li>Application Flutter pour les parcours administrateur et livreur.</li><li>Version desktop Windows.</li>
+                        </ul>
+                    </section>
+
+                    <section class="case-section" aria-labelledby="deliverpro-decisions">
+                        <h2 id="deliverpro-decisions">Difficultés et décisions techniques</h2>
+                        <ul class="feature-list"><li>Centraliser la logique métier dans une API Django REST commune aux interfaces desktop et mobile.</li><li>Utiliser JWT et des permissions distinctes pour les rôles administrateur et livreur.</li><li>Associer React à Electron pour proposer une version desktop Windows.</li><li>Conserver PostgreSQL comme source de données commune afin d'éviter les doubles saisies.</li></ul>
+                        <p class="placeholder-info"><strong>Difficultés rencontrées :</strong> Information à compléter</p>
+                    </section>
+
+                    <section class="case-section" aria-labelledby="deliverpro-captures">
+                        <h2 id="deliverpro-captures">Captures d'écran</h2>
+                        <h3>Back-office desktop</h3>
+                        <p>Interface sombre, navigation latérale et écrans spécialisés pour chaque besoin métier.</p>
+                        <div class="screenshot-grid">
+                            <figure class="screen-shot"><img alt="Connexion administrateur DeliverPro" class="image-portfolio js-lightbox" data-caption="Connexion administrateur" decoding="async" height="768" loading="lazy" src="../assets/images/projects/deliverpro/connexion-administrateur.webp" width="1363"><figcaption><strong>Connexion administrateur</strong> Accès réservé au back-office.</figcaption></figure>
+                            <figure class="screen-shot"><img alt="Tableau de bord global DeliverPro" class="image-portfolio js-lightbox" data-caption="Tableau de bord global" decoding="async" height="768" loading="lazy" src="../assets/images/projects/deliverpro/tableau-de-bord-global.webp" width="1366"><figcaption><strong>Tableau de bord global</strong> Revenus, dépenses, bénéfice net et répartition visuelle.</figcaption></figure>
+                            <figure class="screen-shot"><img alt="Gestion des commandes DeliverPro" class="image-portfolio js-lightbox" data-caption="Gestion des commandes" decoding="async" height="768" loading="lazy" src="../assets/images/projects/deliverpro/gestion-commandes.webp" width="1366"><figcaption><strong>Gestion des commandes</strong> Recherche, filtres, création et suivi.</figcaption></figure>
+                            <figure class="screen-shot"><img alt="Gestion des utilisateurs DeliverPro" class="image-portfolio js-lightbox" data-caption="Gestion des utilisateurs" decoding="async" height="763" loading="lazy" src="../assets/images/projects/deliverpro/gestion-utilisateurs.webp" width="1366"><figcaption><strong>Gestion des utilisateurs</strong> Comptes, rôles, statuts et accès.</figcaption></figure>
+                            <figure class="screen-shot"><img alt="Gestion des entreprises DeliverPro" class="image-portfolio js-lightbox" data-caption="Gestion des entreprises" decoding="async" height="768" loading="lazy" src="../assets/images/projects/deliverpro/gestion-entreprises.webp" width="1366"><figcaption><strong>Gestion des entreprises</strong> Partenaires, revenus et bénéfices.</figcaption></figure>
+                            <figure class="screen-shot"><img alt="Gestion financière DeliverPro" class="image-portfolio js-lightbox" data-caption="Gestion financière" decoding="async" height="768" loading="lazy" src="../assets/images/projects/deliverpro/gestion-financiere.webp" width="1364"><figcaption><strong>Gestion financière</strong> Transactions, revenus, dépenses et bénéfice net.</figcaption></figure>
+                            <figure class="screen-shot"><img alt="Objectifs et budget DeliverPro" class="image-portfolio js-lightbox" data-caption="Objectifs et budget" decoding="async" height="768" loading="lazy" src="../assets/images/projects/deliverpro/objectifs-budget.webp" width="1362"><figcaption><strong>Objectifs et budget</strong> Objectifs de revenus et plafonds de dépenses.</figcaption></figure>
+                            <figure class="screen-shot"><img alt="Export PDF DeliverPro" class="image-portfolio js-lightbox" data-caption="Export PDF" decoding="async" height="768" loading="lazy" src="../assets/images/projects/deliverpro/export-pdf.webp" width="1365"><figcaption><strong>Export PDF</strong> Rapports filtrés par dates, entreprise et livreur.</figcaption></figure>
+                        </div>
+                        <h3>Application mobile livreur</h3>
+                        <p>Lecture des commandes assignées, des statuts de livraison et des paiements encaissés.</p>
+                        <div class="mobile-screenshot-grid">
+                            <figure class="screen-shot mobile-shot"><img alt="Tableau de bord du livreur DeliverPro" class="image-portfolio js-lightbox" data-caption="Tableau de bord du livreur" decoding="async" height="2049" loading="lazy" src="../assets/images/projects/deliverpro/tableau-de-bord-livreur.webp" width="946"><figcaption><strong>Tableau de bord du livreur</strong> Commandes, paiements et états de livraison.</figcaption></figure>
+                            <figure class="screen-shot mobile-shot"><img alt="Commandes livreur DeliverPro" class="image-portfolio js-lightbox" data-caption="Commandes livreur" decoding="async" height="2049" loading="lazy" src="../assets/images/projects/deliverpro/commandes-livreur.webp" width="946"><figcaption><strong>Mes commandes</strong> Filtrage par statut.</figcaption></figure>
+                            <figure class="screen-shot mobile-shot"><img alt="Historique des paiements livreur DeliverPro" class="image-portfolio js-lightbox" data-caption="Historique des paiements" decoding="async" height="2049" loading="lazy" src="../assets/images/projects/deliverpro/historique-paiements-livreur.webp" width="946"><figcaption><strong>Historique des paiements</strong> Encaissements et revenus.</figcaption></figure>
+                        </div>
+                        <h3>Application mobile administrateur</h3>
+                        <p>Gestion mobile des commandes, des partenaires, des finances et des exports.</p>
+                        <div class="mobile-screenshot-grid">
+                            <figure class="screen-shot mobile-shot"><img alt="Connexion mobile administrateur DeliverPro" class="image-portfolio js-lightbox" data-caption="Connexion mobile administrateur" decoding="async" height="2049" loading="lazy" src="../assets/images/projects/deliverpro/connexion-administrateur-mobile.webp" width="946"><figcaption><strong>Connexion sécurisée</strong> Authentification mobile reliée à l'API JWT.</figcaption></figure>
+                            <figure class="screen-shot mobile-shot"><img alt="Commandes administrateur DeliverPro" class="image-portfolio js-lightbox" data-caption="Commandes administrateur" decoding="async" height="2049" loading="lazy" src="../assets/images/projects/deliverpro/commandes-administrateur-mobile.webp" width="946"><figcaption><strong>Commandes</strong> Filtres et création rapide.</figcaption></figure>
+                            <figure class="screen-shot mobile-shot"><img alt="Entreprises administrateur DeliverPro" class="image-portfolio js-lightbox" data-caption="Entreprises administrateur" decoding="async" height="2049" loading="lazy" src="../assets/images/projects/deliverpro/entreprises-administrateur-mobile.webp" width="946"><figcaption><strong>Entreprises</strong> Suivi des partenaires.</figcaption></figure>
+                            <figure class="screen-shot mobile-shot"><img alt="Finances administrateur DeliverPro" class="image-portfolio js-lightbox" data-caption="Finances administrateur" decoding="async" height="2049" loading="lazy" src="../assets/images/projects/deliverpro/finances-administrateur-mobile.webp" width="946"><figcaption><strong>Finances</strong> Revenus, dépenses et transactions.</figcaption></figure>
+                            <figure class="screen-shot mobile-shot"><img alt="Objectifs et export administrateur DeliverPro" class="image-portfolio js-lightbox" data-caption="Objectifs et export administrateur" decoding="async" height="2049" loading="lazy" src="../assets/images/projects/deliverpro/objectifs-export-administrateur-mobile.webp" width="946"><figcaption><strong>Objectifs et export</strong> Objectifs et génération de PDF.</figcaption></figure>
+                        </div>
+                    </section>
+
+                    <section class="case-section" aria-labelledby="deliverpro-resultats">
+                        <h2 id="deliverpro-resultats">Résultats et apprentissages</h2>
+                        <p><strong>Résultat :</strong> les commandes, les utilisateurs, les entreprises et les finances sont regroupés dans un même environnement de travail, du back-office jusqu'au livreur.</p>
+                        <p>Le projet transforme des données opérationnelles en informations exploitables grâce à une interface d'administration, une API réutilisable et une application mobile destinée au terrain.</p>
+                        <p class="placeholder-info"><strong>Apprentissages personnels :</strong> Information à compléter</p>
+                    </section>
+
+                    <section class="case-section" aria-labelledby="deliverpro-liens">
+                        <h2 id="deliverpro-liens">Code et démonstration</h2>
+                        <p>Le code source n'est pas public pour des raisons de confidentialité professionnelle.</p>
+                        <!-- TODO: ajouter un lien explicite vers la démonstration lorsque son URL sera disponible. -->
+                    </section>
+
+                    <nav class="case-navigation" aria-label="Projet suivant"><a class="case-link" href="pizzamama.html">Projet suivant : site de commande pour restaurant</a></nav>
+                </div>
+            </div>
+        </article>
+    <section class="section" id="contact">
+        <div class="frame contact-frame-layout">
+            <p class="frame-title">Parlons de votre projet</p>
+            <div class="contact-frame-body">
+                <img alt="" class="contact-frame-photo" decoding="async" height="806" loading="lazy" src="../assets/images/profile/portrait.webp" width="775">
+                <div class="contact-frame-copy">
+                    <p>
+                        Besoin d'un site web, d'une interface de gestion ou d'une application simple à utiliser ?
+                        Je peux vous aider à cadrer le besoin, puis à réaliser une solution concrète.
+                    </p>
+                    <p>
+                        <a href="mailto:fenotianamichael81@gmail.com">Contactez-moi par e-mail</a>
+                        ou directement par téléphone au
+                        <a href="tel:+261377817771">+261 37 78 17 771</a>.
+                    </p>
+                    <!-- TODO: ajouter ici une phrase visible lorsque TYPE_DE_MISSIONS_RECHERCHÉES, DISPONIBILITÉ et MODE_DE_TRAVAIL seront renseignés. -->
+                    <div class="contact-primary-actions">
+                        <a class="case-link primary" href="mailto:fenotianamichael81@gmail.com">Envoyer un e-mail</a>
+                        <a class="case-link" href="tel:+261377817771">Appeler le +261 37 78 17 771</a>
+                        <a class="case-link" href="https://github.com/Michael81603" rel="noopener noreferrer" target="_blank">Voir mon profil GitHub — nouvel onglet</a>
+                    </div>
+                    <div class="contact-actions">
+                        <button class="btn-copy" data-copy="fenotianamichael81@gmail.com" type="button">Copier l'e-mail</button>
+                        <button class="btn-copy" data-copy="+261377817771" type="button">Copier le téléphone</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    </main>
+
+    <footer class="site-footer">
+        <nav class="footer-links" aria-label="Liens professionnels">
+            <a href="mailto:fenotianamichael81@gmail.com">Envoyer un e-mail</a>
+            <a href="tel:+261377817771">Appeler le +261 37 78 17 771</a>
+            <a href="https://github.com/Michael81603" rel="noopener noreferrer" target="_blank">Voir mon profil GitHub — nouvel onglet</a>
+            <a href="#top">Retour en haut</a>
+            <!-- TODO: ajouter « Voir mon profil LinkedIn — nouvel onglet » lorsque URL_LINKEDIN sera renseignée. -->
+            <!-- TODO: ajouter « Télécharger mon CV » lorsque CHEMIN_DU_CV sera renseigné. -->
+            <!-- TODO optionnel: ajouter WhatsApp uniquement après confirmation que le numéro indiqué y est associé. -->
+        </nav>
+    </footer>
+</body>
+</html>

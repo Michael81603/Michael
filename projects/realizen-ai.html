@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Étude de cas | RealiZen-AI, assistant web de génération d'idées</title>
+    <link href="../assets/icons/favicon-64.png" rel="icon" sizes="64x64" type="image/png">
+    <link href="../assets/css/base.css" rel="stylesheet">
+    <link href="../assets/css/components.css" rel="stylesheet">
+    <link href="../assets/css/pages.css" rel="stylesheet">
+    <script type="module" src="../assets/js/main.js"></script>
+</head>
+<body>
+    <a class="skip-link" href="#contenu">Aller au contenu</a>
+    <header class="porfofio-header" id="top">
+        <div class="portfolio-header-inner">
+            <p class="text-ligne-portfolio-titre">RAKOTOMALALA Fenotiana Michael</p>
+            <a class="contact-button contact-button-portolio" href="mailto:fenotianamichael81@gmail.com">ME CONTACTER</a>
+        </div>
+    </header>
+
+    <main id="contenu" tabindex="-1">
+        <article class="case-study">
+            <header class="section section-gris1 portfolio-hero">
+                <div class="portfolio-hero-inner">
+                    <a class="portfolio-back" href="../index.html#portfolio">Retour au portfolio</a>
+                    <div class="ligne-separateur"></div>
+                    <p class="portfolio-label">Étude de cas</p>
+                    <h1 class="portfolio-title">RealiZen-AI, assistant web de génération d'idées</h1>
+                    <p class="portfolio-lead">Un MVP full-stack qui transforme une question en réponse structurée, conserve les conversations et exporte le contenu généré avec une IA locale.</p>
+                    <div class="stack-chip-list stack-chip-list-centered">
+                        <span class="stack-chip">React / Vite</span><span class="stack-chip">Django REST</span><span class="stack-chip">MySQL</span><span class="stack-chip">JWT</span><span class="stack-chip">Streaming SSE</span><span class="stack-chip">Ollama local</span>
+                    </div>
+                </div>
+            </header>
+
+            <div class="section">
+                <div class="detail-layout">
+                    <section class="case-section" aria-labelledby="realizen-informations">
+                        <h2 id="realizen-informations">Informations rapides</h2>
+                        <dl class="case-facts-list">
+                            <div class="case-fact"><dt>Type de projet</dt><dd>MVP full-stack réalisé dans le cadre d'un hackathon</dd></div>
+                            <div class="case-fact"><dt>Mon rôle</dt><dd>Information à compléter</dd></div>
+                            <div class="case-fact"><dt>Durée</dt><dd>Information à compléter</dd></div>
+                            <div class="case-fact"><dt>Statut</dt><dd>Information à compléter</dd></div>
+                            <div class="case-fact"><dt>Technologies</dt><dd>React, Vite, Tailwind, shadcn/ui, Django REST, MySQL, JWT, SSE et Ollama</dd></div>
+                        </dl>
+                    </section>
+
+                    <section class="case-section" aria-labelledby="realizen-contexte">
+                        <h2 id="realizen-contexte">Contexte</h2>
+                        <p>RealiZen-AI a été développé comme un MVP full-stack dans le cadre d'un hackathon. Le projet vise à rendre l'usage d'un assistant IA concret pour un utilisateur final, grâce à un parcours web, une persistance conversationnelle, une sortie structurée et des exports.</p>
+                    </section>
+
+                    <section class="case-section" aria-labelledby="realizen-probleme">
+                        <h2 id="realizen-probleme">Problème rencontré</h2>
+                        <p>Faire passer une IA locale du stade de prototype technique à celui d'un outil web crédible, lisible et réutilisable.</p>
+                    </section>
+
+                    <section class="case-section" aria-labelledby="realizen-role">
+                        <h2 id="realizen-role">Mon rôle</h2>
+                        <p class="placeholder-info">Information à compléter</p>
+                    </section>
+
+                    <section class="case-section" aria-labelledby="realizen-solution">
+                        <h2 id="realizen-solution">Solution</h2>
+                        <p>Un frontend React/Vite pour l'expérience utilisateur, un backend Django REST pour la logique métier et Ollama pour la génération par IA en local.</p>
+                    </section>
+
+                    <section class="case-section" aria-labelledby="realizen-technologies">
+                        <h2 id="realizen-technologies">Technologies</h2>
+                        <p>React, Vite, Tailwind, shadcn/ui, Django, Django REST Framework, MySQL, JWT, SSE, Ollama et client LLM local.</p>
+                    </section>
+
+                    <section class="case-section" aria-labelledby="realizen-architecture">
+                        <h2 id="realizen-architecture">Architecture et fonctionnement</h2>
+                        <p>Le projet relie l'interface, la logique métier et la couche d'IA. Chaque brique répond à une fonction précise dans le parcours.</p>
+                        <div class="detail-grid">
+                            <article class="detail-card"><h3>Frontend React orienté vers l'usage</h3><p>Pages de connexion et d'inscription, tableau de bord conversationnel et historique, avec reprise de conversation, boutons d'action et retour utilisateur direct.</p></article>
+                            <article class="detail-card"><h3>API Django comme noyau</h3><p>Authentification JWT, endpoints d'idées, conversations, exports et contrôles d'état pour conserver une application correctement découplée.</p></article>
+                            <article class="detail-card"><h3>Couche IA locale</h3><p>Le backend dialogue avec Ollama en local, construit les prompts et gère les cas où la sortie JSON du modèle est partielle ou imparfaite.</p></article>
+                            <article class="detail-card"><h3>Persistance utile</h3><p>Les entités Idea, Conversation et ConversationMessage permettent de relancer un échange, de conserver un historique et de rattacher une idée à chaque réponse.</p></article>
+                        </div>
+                        <div class="detail-note">La réponse est diffusée en streaming SSE, puis normalisée pour produire un contenu structuré avec des suggestions, des variantes, un plan simple et des recommandations.</div>
+                        <div class="metric-grid">
+                            <article class="metric-card"><span class="metric-value">3</span><span class="metric-label">formats d'export déjà prévus</span></article>
+                            <article class="metric-card"><span class="metric-value">SSE</span><span class="metric-label">réponse affichée en streaming</span></article>
+                            <article class="metric-card"><span class="metric-value">JWT</span><span class="metric-label">session sécurisée côté API</span></article>
+                            <article class="metric-card"><span class="metric-value">Local</span><span class="metric-label">modèle d'IA via Ollama en local</span></article>
+                        </div>
+                        <h3>Parcours utilisateur</h3>
+                        <div class="workflow-grid">
+                            <article class="workflow-step"><span class="workflow-number">01</span><h3>Connexion</h3><p>Inscription, connexion, rafraîchissement du jeton et récupération du profil utilisateur.</p></article>
+                            <article class="workflow-step"><span class="workflow-number">02</span><h3>Question</h3><p>L'utilisateur saisit sa demande, choisit un domaine ou laisse l'application le détecter.</p></article>
+                            <article class="workflow-step"><span class="workflow-number">03</span><h3>Streaming</h3><p>La réponse arrive progressivement dans le tableau de bord, avec des relances rapides possibles.</p></article>
+                            <article class="workflow-step"><span class="workflow-number">04</span><h3>Historique</h3><p>Les idées sont sauvegardées, filtrables, consultables et réutilisables dans la conversation correspondante.</p></article>
+                            <article class="workflow-step"><span class="workflow-number">05</span><h3>Export</h3><p>Le contenu peut être exporté au format texte, PDF ou image pour être utilisé en dehors du navigateur.</p></article>
+                        </div>
+                        <h3>Routes et services du backend</h3>
+                        <p>Le backend gère l'état du produit, la continuité des conversations, la sécurité des utilisateurs et la génération d'exports.</p>
+                        <div class="api-endpoint-grid">
+                            <article class="api-endpoint"><code>POST /api/auth/login/</code><p>Connexion de l'utilisateur et délivrance des jetons JWT.</p></article>
+                            <article class="api-endpoint"><code>POST /api/ideas/conversations/stream/</code><p>Envoi de la question, streaming SSE, puis sauvegarde de l'idée et du message de l'assistant.</p></article>
+                            <article class="api-endpoint"><code>GET /api/ideas/conversations/latest/</code><p>Reprise rapide de la dernière conversation.</p></article>
+                            <article class="api-endpoint"><code>GET /api/ideas/</code><p>Historique des idées avec accès aux contenus générés et à leur contexte.</p></article>
+                            <article class="api-endpoint"><code>GET /api/exports/ideas/{id}/text/</code><p>Export au format texte intégré au frontend.</p></article>
+                            <article class="api-endpoint"><code>GET /health/ai/</code><p>Vérification de la disponibilité du moteur d'IA local et des modèles Ollama.</p></article>
+                        </div>
+                    </section>
+
+                    <section class="case-section" aria-labelledby="realizen-fonctionnalites">
+                        <h2 id="realizen-fonctionnalites">Fonctionnalités principales</h2>
+                        <div class="showcase-grid">
+                            <article class="mock-window"><div class="mock-window-body"><p class="mock-eyebrow">Authentification</p><h3 class="mock-title">Connexion et inscription</h3><p class="mock-copy">Accès sécurisé à l'espace personnel.</p><ul class="mock-list"><li>Connexion et inscription reliées à l'API</li><li>Session gérée par JWT et jeton de rafraîchissement</li><li>Redirection selon l'état de la session</li></ul></div></article>
+                            <article class="mock-window"><div class="mock-window-body"><p class="mock-eyebrow">Tableau de bord</p><h3 class="mock-title">Conversation guidée</h3><p class="mock-copy">Question, réponse en direct et relances.</p><ul class="mock-list"><li>Réponse diffusée en streaming</li><li>Suggestions de relances préremplies</li><li>Copie et export du contenu généré</li></ul></div></article>
+                            <article class="mock-window"><div class="mock-window-body"><p class="mock-eyebrow">Historique</p><h3 class="mock-title">Idées sauvegardées et reprises</h3><p class="mock-copy">Conservation, recherche et reprise du contexte.</p><ul class="mock-list"><li>Liste des idées générées</li><li>Recherche par mots-clés ou domaine</li><li>Reprise de la conversation associée</li></ul></div></article>
+                            <article class="mock-window"><div class="mock-window-body"><p class="mock-eyebrow">Exports</p><h3 class="mock-title">Contenu exploitable hors de l'application</h3><p class="mock-copy">Plusieurs formats de sortie pour réutiliser une idée.</p><ul class="mock-list"><li>Export texte d'une idée et d'une conversation</li><li>Génération de PDF et d'images côté backend</li><li>URL de partage prévues pour plusieurs plateformes</li></ul></div></article>
+                        </div>
+                    </section>
+
+                    <section class="case-section" aria-labelledby="realizen-decisions">
+                        <h2 id="realizen-decisions">Difficultés et décisions techniques</h2>
+                        <ul class="feature-list">
+                            <li>Gérer les sorties JSON partielles ou imparfaites du modèle grâce à une normalisation côté backend.</li>
+                            <li>Diffuser la réponse en streaming SSE afin de réduire la sensation d'attente.</li>
+                            <li>Utiliser Ollama pour conserver une génération par IA en local.</li>
+                            <li>Persister les idées, les conversations et leurs messages afin de permettre leur reprise.</li>
+                        </ul>
+                    </section>
+
+                    <section class="case-section" aria-labelledby="realizen-captures">
+                        <h2 id="realizen-captures">Captures d'écran</h2>
+                        <p>Les vues montrent la synthèse du produit, l'authentification, la conversation avec l'IA et l'historique.</p>
+                        <div class="screenshot-grid">
+                            <figure class="screen-shot"><img alt="Vue de synthèse du produit RealiZen-AI" class="image-portfolio js-lightbox" data-caption="Vue de synthèse" decoding="async" height="960" loading="lazy" src="../assets/images/projects/realizen-ai/cover.svg" width="1600"><figcaption><strong>Vue de synthèse</strong> Authentification, conversation, historique et export.</figcaption></figure>
+                            <figure class="screen-shot"><img alt="Page de connexion RealiZen-AI" class="image-portfolio js-lightbox" data-caption="Connexion" decoding="async" height="688" loading="lazy" src="../assets/images/projects/realizen-ai/connexion.webp" width="1363"><figcaption><strong>Page de connexion</strong> Accès à l'espace personnel.</figcaption></figure>
+                            <figure class="screen-shot"><img alt="Tableau de bord de conversation RealiZen-AI" class="image-portfolio js-lightbox" data-caption="Conversation IA" decoding="async" height="643" loading="lazy" src="../assets/images/projects/realizen-ai/conversation.webp" width="1366"><figcaption><strong>Conversation avec l'IA</strong> Question et réponse en streaming.</figcaption></figure>
+                            <figure class="screen-shot"><img alt="Historique des idées RealiZen-AI" class="image-portfolio js-lightbox" data-caption="Historique" decoding="async" height="688" loading="lazy" src="../assets/images/projects/realizen-ai/historique.webp" width="1366"><figcaption><strong>Historique des idées</strong> Liste et reprise des conversations.</figcaption></figure>
+                        </div>
+                    </section>
+
+                    <section class="case-section" aria-labelledby="realizen-resultats">
+                        <h2 id="realizen-resultats">Résultats et apprentissages</h2>
+                        <p><strong>Résultat :</strong> l'utilisateur peut se connecter, poser une question, suivre la réponse en direct, reprendre la conversation et exporter le contenu généré.</p>
+                        <div class="proof-grid">
+                            <article class="proof-card"><h3>Vision produit</h3><p>Un parcours complet avec continuité et contenu exploitable.</p></article>
+                            <article class="proof-card"><h3>Capacité full-stack</h3><p>Interface, backend, modèle de données, streaming, authentification et couche d'IA.</p></article>
+                            <article class="proof-card"><h3>Rigueur technique</h3><p>Normalisation, contrôles d'état et persistance conversationnelle.</p></article>
+                        </div>
+                        <p class="placeholder-info"><strong>Apprentissages personnels :</strong> Information à compléter</p>
+                        <h3>Pistes d'évolution documentées</h3>
+                        <ul class="feature-list"><li>Ajouter une page de présentation publique.</li><li>Intégrer côté frontend les exports PDF et image ainsi que les URL de partage.</li><li>Renforcer les tests des modules d'authentification et d'export.</li><li>Préparer un déploiement cloud avec supervision du moteur d'IA et plusieurs environnements.</li></ul>
+                    </section>
+
+                    <section class="case-section" aria-labelledby="realizen-liens">
+                        <h2 id="realizen-liens">Code et démonstration</h2>
+                        <!-- TODO: ajouter un lien explicite vers le code source lorsque son URL sera disponible. -->
+                        <!-- TODO: ajouter un lien explicite vers la démonstration lorsque son URL sera disponible. -->
+                    </section>
+
+                    <nav class="case-navigation" aria-label="Projet suivant"><a class="case-link" href="deliverpro.html">Projet suivant : DeliverPro</a></nav>
+                </div>
+            </div>
+        </article>
+    <section class="section" id="contact">
+        <div class="frame contact-frame-layout">
+            <p class="frame-title">Parlons de votre projet</p>
+            <div class="contact-frame-body">
+                <img alt="" class="contact-frame-photo" decoding="async" height="806" loading="lazy" src="../assets/images/profile/portrait.webp" width="775">
+                <div class="contact-frame-copy">
+                    <p>
+                        Besoin d'un site web, d'une interface de gestion ou d'une application simple à utiliser ?
+                        Je peux vous aider à cadrer le besoin, puis à réaliser une solution concrète.
+                    </p>
+                    <p>
+                        <a href="mailto:fenotianamichael81@gmail.com">Contactez-moi par e-mail</a>
+                        ou directement par téléphone au
+                        <a href="tel:+261377817771">+261 37 78 17 771</a>.
+                    </p>
+                    <!-- TODO: ajouter ici une phrase visible lorsque TYPE_DE_MISSIONS_RECHERCHÉES, DISPONIBILITÉ et MODE_DE_TRAVAIL seront renseignés. -->
+                    <div class="contact-primary-actions">
+                        <a class="case-link primary" href="mailto:fenotianamichael81@gmail.com">Envoyer un e-mail</a>
+                        <a class="case-link" href="tel:+261377817771">Appeler le +261 37 78 17 771</a>
+                        <a class="case-link" href="https://github.com/Michael81603" rel="noopener noreferrer" target="_blank">Voir mon profil GitHub — nouvel onglet</a>
+                    </div>
+                    <div class="contact-actions">
+                        <button class="btn-copy" data-copy="fenotianamichael81@gmail.com" type="button">Copier l'e-mail</button>
+                        <button class="btn-copy" data-copy="+261377817771" type="button">Copier le téléphone</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    </main>
+
+    <footer class="site-footer">
+        <nav class="footer-links" aria-label="Liens professionnels">
+            <a href="mailto:fenotianamichael81@gmail.com">Envoyer un e-mail</a>
+            <a href="tel:+261377817771">Appeler le +261 37 78 17 771</a>
+            <a href="https://github.com/Michael81603" rel="noopener noreferrer" target="_blank">Voir mon profil GitHub — nouvel onglet</a>
+            <a href="#top">Retour en haut</a>
+            <!-- TODO: ajouter « Voir mon profil LinkedIn — nouvel onglet » lorsque URL_LINKEDIN sera renseignée. -->
+            <!-- TODO: ajouter « Télécharger mon CV » lorsque CHEMIN_DU_CV sera renseigné. -->
+            <!-- TODO optionnel: ajouter WhatsApp uniquement après confirmation que le numéro indiqué y est associé. -->
+        </nav>
+    </footer>
+</body>
+</html>

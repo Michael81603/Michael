@@ -4,31 +4,54 @@
     <meta charset="utf-8">
     <meta content="IE=edge" http-equiv="X-UA-Compatible">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="noindex, follow" name="robots">
     <title>Contact</title>
-    <link href="styles.css" rel="stylesheet">
-    <script defer src="app.js"></script>
+    <link href="assets/icons/favicon-64.png" rel="icon" sizes="64x64" type="image/png">
+    <link href="assets/css/base.css" rel="stylesheet">
+    <link href="assets/css/components.css" rel="stylesheet">
+    <link href="assets/css/pages.css" rel="stylesheet">
+    <script type="module" src="assets/js/main.js"></script>
 </head>
-<body>
+<body id="top">
+    <a class="skip-link" href="#contenu">Aller au contenu</a>
+    <main id="contenu" tabindex="-1">
     <div class="frame contact-frame-layout">
         <p class="frame-title">Parlons de votre projet</p>
         <div class="contact-frame-body">
-            <img alt="Photo de profil" class="contact-frame-photo" src="profile.jpg">
+            <img alt="" class="contact-frame-photo" decoding="async" height="806" src="assets/images/profile/portrait.webp" width="775">
             <div class="contact-frame-copy">
                 <p>
-                    Besoin d'un site web, d'une interface de gestion ou d'une application simple a utiliser ?
-                    Je peux vous aider a cadrer le besoin puis a realiser une solution concrete.
+                    Besoin d'un site web, d'une interface de gestion ou d'une application simple à utiliser ?
+                    Je peux vous aider à cadrer le besoin, puis à réaliser une solution concrète.
                 </p>
                 <p>
-                    <a href="mailto:fenotianamichael81@gmail.com">Contactez-moi par email</a>
-                    ou directement par telephone au
+                    <a href="mailto:fenotianamichael81@gmail.com">Contactez-moi par e-mail</a>
+                    ou directement par téléphone au
                     <a href="tel:+261377817771">+261 37 78 17 771</a>.
                 </p>
+                <!-- TODO: ajouter ici une phrase visible lorsque TYPE_DE_MISSIONS_RECHERCHÉES, DISPONIBILITÉ et MODE_DE_TRAVAIL seront renseignés. -->
+                <div class="contact-primary-actions">
+                    <a class="case-link primary" href="mailto:fenotianamichael81@gmail.com">Envoyer un e-mail</a>
+                    <a class="case-link" href="tel:+261377817771">Appeler le +261 37 78 17 771</a>
+                    <a class="case-link" href="https://github.com/Michael81603" rel="noopener noreferrer" target="_blank">Voir mon profil GitHub — nouvel onglet</a>
+                </div>
                 <div class="contact-actions">
-                    <button class="btn-copy" data-copy="fenotianamichael81@gmail.com" type="button">Copier email</button>
-                    <button class="btn-copy" data-copy="+261377817771" type="button">Copier telephone</button>
+                    <button class="btn-copy" data-copy="fenotianamichael81@gmail.com" type="button">Copier l'e-mail</button>
+                    <button class="btn-copy" data-copy="+261377817771" type="button">Copier le téléphone</button>
                 </div>
             </div>
         </div>
     </div>
+    </main>
+    <footer class="site-footer site-footer-compact">
+        <nav class="footer-links" aria-label="Liens professionnels">
+            <a href="mailto:fenotianamichael81@gmail.com">Envoyer un e-mail</a>
+            <a href="tel:+261377817771">Appeler le +261 37 78 17 771</a>
+            <a href="https://github.com/Michael81603" rel="noopener noreferrer" target="_blank">Voir mon profil GitHub — nouvel onglet</a>
+            <!-- TODO: ajouter « Voir mon profil LinkedIn — nouvel onglet » lorsque URL_LINKEDIN sera renseignée. -->
+            <!-- TODO: ajouter « Télécharger mon CV » lorsque CHEMIN_DU_CV sera renseigné. -->
+            <!-- TODO optionnel: ajouter WhatsApp uniquement après confirmation que le numéro indiqué y est associé. -->
+        </nav>
+    </footer>
 </body>
 </html>
