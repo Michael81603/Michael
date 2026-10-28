@@ -2,17 +2,16 @@
 
 Date de validation : 27 octobre 2026
 
-Ce document décrit la version statique conservée avant la migration vers Astro, React et Keystatic. Aucun fichier d'origine ou d'archive ne doit être supprimé sans validation explicite.
+Ce document décrit la version statique conservée avant la migration vers Astro, React et Keystatic. Depuis la Phase 11, ses fichiers se trouvent dans `archive/portfolio-v1/`. Aucun fichier d'origine ou d'archive ne doit être supprimé sans validation explicite.
 
 ## Pages conservées
 
-- `index.html` : page d'accueil publique.
-- `projects/realizen-ai.html` : étude de cas RealiZen-AI.
-- `projects/deliverpro.html` : étude de cas DeliverPro.
-- `projects/pizzamama.html` : étude de cas Pizzamama.
-- `projects/gestion-revenus.html` : étude de cas Gestion des revenus et dépenses.
-- `contact-frame.html` : page technique de contact, exclue de l'indexation.
-- `design/prototype/index.html` : prototype visuel de référence, non destiné à l'indexation.
+- `archive/portfolio-v1/index.html` : page d'accueil publique archivée.
+- `archive/portfolio-v1/projects/realizen-ai.html` : étude de cas RealiZen-AI.
+- `archive/portfolio-v1/projects/deliverpro.html` : étude de cas DeliverPro.
+- `archive/portfolio-v1/projects/pizzamama.html` : étude de cas Pizzamama.
+- `archive/portfolio-v1/projects/gestion-revenus.html` : étude de cas Gestion des revenus et dépenses.
+- `archive/portfolio-v1/contact-frame.html` : page technique de contact archivée.
 
 ## Réorganisation réalisée
 
@@ -41,13 +40,7 @@ Le dossier `assets/images/archive/` contient des ressources historiques qui ne s
 - `archive/pizzamama/` : anciennes captures générales du projet Pizzamama ;
 - `archive/site/` : formes, fonds et images utilisés par les anciennes versions du portfolio.
 
-Le dossier `design/` contient les maquettes et captures de conception :
-
-- concepts générés en image ;
-- captures du prototype codé en formats ordinateur et mobile ;
-- prototype HTML/CSS éditorial.
-
-Le dossier `_chrome_profile2/` est un ancien profil de test Chrome déjà suivi par Git. Il n'est pas requis par le site ; sa suppression éventuelle reste différée jusqu'à validation explicite.
+Les anciennes maquettes du dossier `design/` et le profil de test `_chrome_profile2/` ont été supprimés lors du nettoyage final, après validation de la nouvelle version. Ils restent récupérables depuis l’historique Git antérieur à la migration.
 
 ## Vérifications effectuées
 

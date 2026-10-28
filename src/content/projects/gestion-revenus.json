@@ -1,0 +1,49 @@
+{
+  "title": "Application de gestion des revenus et dépenses",
+  "type": "Application de suivi budgétaire",
+  "summary": "Une application qui centralise les transactions, automatise les calculs utiles et rend l’analyse budgétaire plus lisible.",
+  "cover": {
+    "image": "/images/projects/gestion-revenus/analyse-revenus-depenses.webp",
+    "alt": "Analyse des revenus et dépenses dans l’application",
+    "width": 1364,
+    "height": 647
+  },
+  "gallery": [
+    {"image":"/images/projects/gestion-revenus/vue-principale.webp","alt":"Écran de connexion au suivi des dépenses et budgets","caption":"Vue principale de l’application.","width":1360,"height":648},
+    {"image":"/images/projects/gestion-revenus/suivi-budgetaire.webp","alt":"Tableau de bord avec alerte de dépassement du budget","caption":"Tableau de suivi budgétaire.","width":1366,"height":652},
+    {"image":"/images/projects/gestion-revenus/resume-transactions.webp","alt":"Graphique de répartition des dépenses par catégorie","caption":"Résumé des transactions.","width":1364,"height":651},
+    {"image":"/images/projects/gestion-revenus/analyse-revenus-depenses.webp","alt":"Graphique d’évolution quotidienne des revenus et dépenses","caption":"Analyse des revenus et des dépenses.","width":1364,"height":647},
+    {"image":"/images/projects/gestion-revenus/visualisation-financiere.webp","alt":"Graphique comparant les revenus et dépenses mensuels","caption":"Visualisation des données financières.","width":1364,"height":650},
+    {"image":"/images/projects/gestion-revenus/historique-operations.webp","alt":"Graphique annuel des revenus et dépenses","caption":"Historique des opérations.","width":1364,"height":653},
+    {"image":"/images/projects/gestion-revenus/vue-complementaire.webp","alt":"Comparaison des revenus et dépenses entre deux périodes","caption":"Vue complémentaire de l’application.","width":1366,"height":729}
+  ],
+  "technologies": ["streamlit","plotly","fastapi","python"],
+  "context": "Ce projet a été conçu pour faciliter l’enregistrement, l’organisation et l’analyse des revenus et des dépenses. L’objectif était de centraliser les informations utiles dans une interface claire, sans multiplier les écrans ni les manipulations.",
+  "problem": "Rendre le suivi budgétaire plus lisible grâce à un historique exploitable et à une vision immédiate du solde.",
+  "solution": [
+    "Une interface Streamlit pour enregistrer et consulter les opérations.",
+    "Une API FastAPI pour porter la logique applicative.",
+    "Des visualisations Plotly pour présenter les données financières."
+  ],
+  "features": [
+    "Ajout, modification et suppression des revenus et des dépenses.",
+    "Calcul automatique du solde disponible.",
+    "Catégorisation des transactions.",
+    "Historique des opérations enregistrées.",
+    "Résumé et graphiques des données financières."
+  ],
+  "decisions": [
+    "Associer Streamlit, FastAPI et Plotly pour séparer l’interface, la logique applicative et la visualisation."
+  ],
+  "architecture": "L’application relie une interface Streamlit à une API FastAPI et utilise Plotly pour présenter les données financières sous forme de graphiques.",
+  "result": "Les transactions, les catégories et les indicateurs financiers sont regroupés dans un seul espace de travail.",
+  "role": "",
+  "duration": "",
+  "status": "",
+  "githubUrl": "https://github.com/Michael81603/gestion_revenu.git",
+  "demoUrl": "",
+  "codeNote": "",
+  "featured": false,
+  "order": 4,
+  "draft": false
+}

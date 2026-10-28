@@ -1,0 +1,62 @@
+{
+  "title": "DeliverPro, plateforme de gestion de livraison",
+  "type": "Plateforme de gestion de livraison",
+  "summary": "Une plateforme réunissant un back-office desktop, une API métier et une application Flutter pour centraliser commandes, partenaires et finances.",
+  "cover": {
+    "image": "/images/projects/deliverpro/tableau-de-bord-global.webp",
+    "alt": "Tableau de bord global de DeliverPro",
+    "width": 1366,
+    "height": 768
+  },
+  "gallery": [
+    {"image":"/images/projects/deliverpro/connexion-administrateur.webp","alt":"Connexion administrateur DeliverPro","caption":"Accès réservé au back-office.","width":1363,"height":768},
+    {"image":"/images/projects/deliverpro/tableau-de-bord-global.webp","alt":"Tableau de bord global DeliverPro","caption":"Revenus, dépenses, bénéfice net et répartition visuelle.","width":1366,"height":768},
+    {"image":"/images/projects/deliverpro/gestion-commandes.webp","alt":"Gestion des commandes DeliverPro","caption":"Recherche, filtres, création et suivi des commandes.","width":1366,"height":768},
+    {"image":"/images/projects/deliverpro/gestion-utilisateurs.webp","alt":"Gestion des utilisateurs DeliverPro","caption":"Comptes, rôles, statuts et accès.","width":1366,"height":763},
+    {"image":"/images/projects/deliverpro/gestion-entreprises.webp","alt":"Gestion des entreprises DeliverPro","caption":"Partenaires, revenus et bénéfices.","width":1366,"height":768},
+    {"image":"/images/projects/deliverpro/gestion-financiere.webp","alt":"Gestion financière DeliverPro","caption":"Transactions, revenus, dépenses et bénéfice net.","width":1364,"height":768},
+    {"image":"/images/projects/deliverpro/objectifs-budget.webp","alt":"Objectifs et budget DeliverPro","caption":"Objectifs de revenus et plafonds de dépenses.","width":1362,"height":768},
+    {"image":"/images/projects/deliverpro/export-pdf.webp","alt":"Export PDF DeliverPro","caption":"Rapports filtrés par dates, entreprise et livreur.","width":1365,"height":768},
+    {"image":"/images/projects/deliverpro/tableau-de-bord-livreur.webp","alt":"Tableau de bord du livreur DeliverPro","caption":"Commandes, paiements et états de livraison.","width":946,"height":2049},
+    {"image":"/images/projects/deliverpro/commandes-livreur.webp","alt":"Commandes du livreur DeliverPro","caption":"Commandes filtrées par statut.","width":946,"height":2049},
+    {"image":"/images/projects/deliverpro/historique-paiements-livreur.webp","alt":"Historique des paiements du livreur DeliverPro","caption":"Encaissements et revenus.","width":946,"height":2049},
+    {"image":"/images/projects/deliverpro/connexion-administrateur-mobile.webp","alt":"Connexion mobile administrateur DeliverPro","caption":"Authentification mobile reliée à l’API JWT.","width":946,"height":2049},
+    {"image":"/images/projects/deliverpro/commandes-administrateur-mobile.webp","alt":"Commandes administrateur sur DeliverPro mobile","caption":"Filtres et création rapide de commandes.","width":946,"height":2049},
+    {"image":"/images/projects/deliverpro/entreprises-administrateur-mobile.webp","alt":"Entreprises administrateur sur DeliverPro mobile","caption":"Suivi mobile des partenaires.","width":946,"height":2049},
+    {"image":"/images/projects/deliverpro/finances-administrateur-mobile.webp","alt":"Finances administrateur sur DeliverPro mobile","caption":"Revenus, dépenses et transactions.","width":946,"height":2049},
+    {"image":"/images/projects/deliverpro/objectifs-export-administrateur-mobile.webp","alt":"Objectifs et export administrateur sur DeliverPro mobile","caption":"Objectifs et génération de PDF.","width":946,"height":2049}
+  ],
+  "technologies": ["react","vite","electron","django","django-rest-framework","postgresql","flutter","jwt"],
+  "context": "DeliverPro a été conçu pour suivre une activité de livraison depuis une seule interface, sans alterner entre plusieurs tableaux, fichiers ou espaces de travail. L’API métier alimente le back-office et les parcours mobiles administrateur et livreur.",
+  "problem": "Centraliser les opérations quotidiennes et les indicateurs financiers, puis partager la même logique métier entre le poste administrateur et l’application mobile.",
+  "solution": [
+    "Un back-office React et Electron pour l’administration sur ordinateur.",
+    "Une API Django REST sécurisée par JWT comme source de référence.",
+    "Une application Flutter pour les parcours administrateur et livreur."
+  ],
+  "features": [
+    "Tableau de bord global avec indicateurs financiers et visualisations.",
+    "Gestion des commandes avec recherche, filtres et suivi par statut.",
+    "Administration des utilisateurs, des rôles et des entreprises partenaires.",
+    "Suivi des revenus, dépenses, bénéfice net, objectifs et budgets.",
+    "Rapports PDF filtrés par période, entreprise et livreur.",
+    "Parcours mobiles administrateur et livreur, complétés par une version desktop Windows."
+  ],
+  "decisions": [
+    "Centraliser la logique métier dans une API Django REST commune aux interfaces desktop et mobile.",
+    "Utiliser JWT et des permissions distinctes pour les rôles administrateur et livreur.",
+    "Conserver PostgreSQL comme source de données commune afin d’éviter les doubles saisies."
+  ],
+  "architecture": "Le produit repose sur un back-office React et Electron, une API Django REST reliée à PostgreSQL et une application Flutter. Les interfaces utilisent le même backend pour synchroniser les opérations et les indicateurs.",
+  "result": "Les commandes, les utilisateurs, les entreprises et les finances sont regroupés dans un même environnement de travail, du back-office jusqu’au livreur.",
+  "role": "",
+  "duration": "",
+  "status": "",
+  "githubUrl": "",
+  "demoUrl": "",
+  "codeNote": "Le code source n’est pas public pour des raisons de confidentialité professionnelle.",
+  "featured": false,
+  "order": 2,
+  "draft": false
+}
+

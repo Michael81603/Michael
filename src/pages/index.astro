@@ -1,0 +1,174 @@
+---
+import ProjectCarousel3D from "../components/ProjectCarousel3D";
+import SiteNavigation from "../components/SiteNavigation";
+import SkillsExplorer from "../components/SkillsExplorer";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { getOrderedSkills, getPublishedProjects } from "../lib/content";
+import { buildHomeJsonLd } from "../lib/seo";
+
+const projects = await getPublishedProjects();
+const skills = await getOrderedSkills();
+const skillNames = new Map(skills.map(({ id, data }) => [id, data.name]));
+const featuredSkills = skills.filter(({ data }) => data.featured);
+
+const carouselProjects = projects.map(({ id, data }) => ({
+  id,
+  title: data.title,
+  type: data.type,
+  summary: data.summary,
+  image: data.cover.image,
+  alt: data.cover.alt,
+  width: data.cover.width,
+  height: data.cover.height,
+  technologies: data.technologies
+    .map((technology) => skillNames.get(technology.id))
+    .filter((name): name is string => Boolean(name)),
+}));
+
+const explorerSkills = skills.map(({ id, data }) => ({
+  id,
+  name: data.name,
+  category: data.category,
+  description: data.description,
+  featured: data.featured,
+  projects: projects
+    .filter(({ data: project }) => project.technologies.some((technology) => technology.id === id))
+    .map(({ data: project }) => project.title),
+}));
+const pageTitle = "Fenotiana Michael — Développeur full-stack web et mobile";
+const pageDescription = "Portfolio de Fenotiana Michael, développeur full-stack web et mobile : applications, interfaces de gestion, API et projets métier.";
+const jsonLd = buildHomeJsonLd(Astro.site);
+---
+
+<BaseLayout
+  title={pageTitle}
+  description={pageDescription}
+  canonicalPath="/"
+  jsonLd={jsonLd}
+>
+  <header class="site-header" id="accueil">
+    <a class="monogram" href="#accueil" aria-label="Revenir en haut de la page">F/M</a>
+    <SiteNavigation client:load />
+  </header>
+
+  <main id="contenu">
+    <section class="hero" aria-labelledby="page-title">
+      <div class="hero-copy">
+        <p class="eyebrow">RAKOTOMALALA Fenotiana Michael</p>
+        <h1 id="page-title">Développeur full-stack web et mobile.</h1>
+        <p class="lead">
+          Je conçois des applications web et mobiles, des interfaces de gestion et des outils métier
+          clairs, rapides et faciles à faire évoluer.
+        </p>
+
+        <!-- TODO : afficher la localisation lorsqu’elle sera renseignée. -->
+        <!-- TODO : afficher la disponibilité lorsqu’elle sera renseignée. -->
+
+        <ul class="hero-technologies" aria-label="Technologies principales">
+          {featuredSkills.map(({ data }) => <li>{data.name}</li>)}
+        </ul>
+
+        <div class="actions">
+          <a class="button button-primary" href="#projets">Voir mes projets</a>
+          <a class="text-link" href="#contact">Me contacter <span aria-hidden="true">↘</span></a>
+        </div>
+      </div>
+
+      <div class="portrait-composition">
+        <span class="portrait-signature" aria-hidden="true">F/M</span>
+        <div class="portrait-frame">
+          <img
+            src="/images/profile/portrait.webp"
+            alt="Portrait de Fenotiana Michael"
+            width="775"
+            height="806"
+            decoding="async"
+            fetchpriority="high"
+          />
+        </div>
+        <p aria-hidden="true">Web · Mobile · API</p>
+      </div>
+    </section>
+
+    <section class="section introduction" id="presentation" aria-labelledby="presentation-title">
+      <p class="eyebrow">Présentation</p>
+      <div class="introduction-grid">
+        <h2 id="presentation-title">Du besoin métier au produit utilisable.</h2>
+        <div class="introduction-copy">
+          <p>
+            Je transforme un besoin métier en produit web ou mobile concret, avec une attention particulière
+            à la clarté de l’interface, à la maintenance et à l’autonomie du client.
+          </p>
+          <dl class="expertise-list">
+            <div><dt>01</dt><dd>Applications web et mobiles</dd></div>
+            <div><dt>02</dt><dd>Interfaces de gestion</dd></div>
+            <div><dt>03</dt><dd>API et données</dd></div>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <section class="section projects-section" id="projets" aria-labelledby="projects-title">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Projets sélectionnés</p>
+          <h2 id="projects-title">Des produits concrets, présentés sans détour.</h2>
+        </div>
+        <p class="section-intro">
+          Chaque projet met en avant son objectif, sa solution et les choix techniques essentiels.
+        </p>
+      </div>
+      <ProjectCarousel3D projects={carouselProjects} client:load />
+    </section>
+
+    <section class="section skills-section" id="competences" aria-labelledby="skills-title">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Compétences</p>
+          <h2 id="skills-title">Un socle complet, organisé par usage.</h2>
+        </div>
+        <p class="section-intro">
+          Les technologies sont reliées aux projets et se mettent à jour depuis l’administration.
+        </p>
+      </div>
+
+      <SkillsExplorer skills={explorerSkills} client:load />
+    </section>
+
+    <section class="section contact-section" id="contact" aria-labelledby="contact-title">
+      <div class="contact-mark" aria-hidden="true">F/M</div>
+      <div class="contact-content">
+        <p class="eyebrow">Contact</p>
+        <h2 id="contact-title">Parlons de votre prochain projet.</h2>
+        <p>
+          Pour un site web, une application ou une interface de gestion, présentez-moi votre besoin
+          et le contexte du projet.
+        </p>
+
+        <!-- TODO : ajouter le type de missions, la disponibilité et le mode de travail lorsqu’ils seront renseignés. -->
+
+        <div class="contact-actions">
+          <a class="button button-primary" href="mailto:fenotianamichael81@gmail.com">Envoyer un e-mail</a>
+          <a class="button button-secondary" href="tel:+261377817771">Appeler le +261 37 78 17 771</a>
+        </div>
+        <a class="professional-link" href="https://github.com/Michael81603" target="_blank" rel="noopener noreferrer">
+          Voir mon profil GitHub <span class="visually-hidden">— nouvel onglet</span><span aria-hidden="true">↗</span>
+        </a>
+        <!-- TODO : ajouter LinkedIn et le CV lorsque leurs URL seront renseignées. -->
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div>
+      <a class="monogram" href="#accueil" aria-label="Revenir en haut de la page">F/M</a>
+      <p>RAKOTOMALALA Fenotiana Michael<br />Développeur full-stack web et mobile</p>
+    </div>
+    <nav aria-label="Liens professionnels">
+      <a href="mailto:fenotianamichael81@gmail.com">E-mail</a>
+      <a href="tel:+261377817771">Téléphone</a>
+      <a href="https://github.com/Michael81603" target="_blank" rel="noopener noreferrer">GitHub <span class="visually-hidden">— nouvel onglet</span></a>
+    </nav>
+    <a href="#accueil">Retour en haut ↑</a>
+  </footer>
+</BaseLayout>

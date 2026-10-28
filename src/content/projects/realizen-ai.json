@@ -1,0 +1,49 @@
+{
+  "title": "RealiZen-AI, assistant web de génération d’idées",
+  "type": "MVP full-stack réalisé dans le cadre d’un hackathon",
+  "summary": "Un MVP qui transforme une question en réponse structurée, conserve les conversations et exporte le contenu généré avec une IA locale.",
+  "cover": {
+    "image": "/images/projects/realizen-ai/cover.svg",
+    "alt": "Vue de synthèse du produit RealiZen-AI",
+    "width": 1600,
+    "height": 960
+  },
+  "gallery": [
+    {"image":"/images/projects/realizen-ai/cover.svg","alt":"Vue de synthèse du produit RealiZen-AI","caption":"Vue de synthèse : authentification, conversation, historique et export.","width":1600,"height":960},
+    {"image":"/images/projects/realizen-ai/connexion.webp","alt":"Page de connexion RealiZen-AI","caption":"Accès à l’espace personnel.","width":1363,"height":688},
+    {"image":"/images/projects/realizen-ai/conversation.webp","alt":"Tableau de bord de conversation RealiZen-AI","caption":"Question et réponse en streaming.","width":1366,"height":643},
+    {"image":"/images/projects/realizen-ai/historique.webp","alt":"Historique des idées RealiZen-AI","caption":"Liste et reprise des conversations.","width":1366,"height":688}
+  ],
+  "technologies": ["react","vite","tailwind-css","shadcn-ui","django","django-rest-framework","mysql","jwt","sse","ollama"],
+  "context": "RealiZen-AI a été développé comme un MVP full-stack dans le cadre d’un hackathon. Le projet vise à rendre l’usage d’un assistant IA concret pour un utilisateur final, grâce à un parcours web, une persistance conversationnelle, une sortie structurée et des exports.",
+  "problem": "Faire passer une IA locale du stade de prototype technique à celui d’un outil web crédible, lisible et réutilisable.",
+  "solution": [
+    "Un frontend React et Vite pour l’expérience utilisateur.",
+    "Une API Django REST pour la logique métier, la sécurité et la persistance.",
+    "Ollama pour produire les réponses avec un modèle d’IA exécuté localement."
+  ],
+  "features": [
+    "Connexion et inscription avec session gérée par JWT.",
+    "Conversation guidée avec réponse diffusée en streaming SSE.",
+    "Suggestions de relance et copie du contenu généré.",
+    "Historique avec recherche et reprise des conversations.",
+    "Exports texte, PDF et image prévus par le backend."
+  ],
+  "decisions": [
+    "Normaliser côté backend les sorties JSON partielles ou imparfaites du modèle.",
+    "Diffuser la réponse en streaming SSE afin de réduire la sensation d’attente.",
+    "Persister les idées, les conversations et leurs messages pour permettre leur reprise."
+  ],
+  "architecture": "L’interface React communique avec une API Django REST qui porte l’authentification, les conversations, les exports et la persistance MySQL. Le backend dialogue avec Ollama en local et diffuse les réponses vers le navigateur en SSE.",
+  "result": "L’utilisateur peut se connecter, poser une question, suivre la réponse en direct, reprendre la conversation et exporter le contenu généré.",
+  "role": "",
+  "duration": "",
+  "status": "",
+  "githubUrl": "",
+  "demoUrl": "",
+  "codeNote": "",
+  "featured": true,
+  "order": 1,
+  "draft": false
+}
+

@@ -1,0 +1,49 @@
+{
+  "title": "Site de commande pour restaurant",
+  "type": "Projet client dans la restauration",
+  "summary": "Un site de commande qui améliore la visibilité du restaurant et lui permet de gérer simplement son menu et les commandes.",
+  "cover": {
+    "image": "/images/projects/pizzamama/menu-01.webp",
+    "alt": "Menu du site de commande Pizzamama",
+    "width": 1348,
+    "height": 731
+  },
+  "gallery": [
+    {"image":"/images/projects/pizzamama/accueil.webp","alt":"Page d’accueil du site Pizzamama","caption":"Page d’accueil du site.","width":1366,"height":730},
+    {"image":"/images/projects/pizzamama/menu-01.webp","alt":"Première vue du menu Pizzamama","caption":"Première vue du menu.","width":1348,"height":731},
+    {"image":"/images/projects/pizzamama/menu-02.webp","alt":"Seconde vue du menu Pizzamama","caption":"Seconde vue du menu.","width":1356,"height":728},
+    {"image":"/images/projects/pizzamama/validation-commande-01.webp","alt":"Premier écran de validation de commande Pizzamama","caption":"Première étape de validation de la commande.","width":1366,"height":727},
+    {"image":"/images/projects/pizzamama/validation-commande-02.webp","alt":"Second écran de validation de commande Pizzamama","caption":"Seconde étape de validation de la commande.","width":1366,"height":730},
+    {"image":"/images/projects/pizzamama/suivi-commande.webp","alt":"Suivi de commande Pizzamama","caption":"Suivi de la commande après confirmation.","width":1359,"height":730}
+  ],
+  "technologies": ["html","css","django","python"],
+  "context": "Ce projet a été réalisé pour un client dans la restauration. Le besoin était de gagner en visibilité sur le web et de proposer un système de commande accessible. L’administration devait rester directe pour un client novice avec les outils numériques.",
+  "problem": "Construire une expérience simple pour les clients tout en donnant au restaurateur une véritable autonomie dans la gestion du contenu.",
+  "solution": [
+    "Un site web présentant le restaurant et son menu.",
+    "Un parcours de commande et de suivi destiné aux visiteurs.",
+    "Une administration Django sur mesure pour gérer le contenu et les commandes."
+  ],
+  "features": [
+    "Page d’accueil présentant le restaurant et son offre.",
+    "Menu organisé par catégories avec les détails des produits.",
+    "Parcours de commande en ligne.",
+    "Écrans de validation et suivi de la commande.",
+    "Administration Django des catégories, des produits et des commandes."
+  ],
+  "decisions": [
+    "Proposer une administration Django directe et facile à prendre en main pour un client novice avec les outils numériques."
+  ],
+  "architecture": "Le site relie un parcours public de consultation et de commande à une interface d’administration Django utilisée pour gérer le menu et les commandes.",
+  "result": "Le restaurant peut modifier ses catégories et ses produits, puis gérer les commandes depuis un tableau de bord dédié.",
+  "role": "",
+  "duration": "",
+  "status": "",
+  "githubUrl": "https://github.com/Michael81603/Pizzamama",
+  "demoUrl": "",
+  "codeNote": "",
+  "featured": false,
+  "order": 3,
+  "draft": false
+}
+
